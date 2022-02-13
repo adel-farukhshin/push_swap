@@ -17,4 +17,5 @@ int	main (int argc, char **argv)
 	printf("check out %d\n", i);
 	if (i == -1)
 		return (-1);
+	stack_init(argc, argv);
 }
