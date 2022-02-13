@@ -1,7 +1,7 @@
 
 NAME = push_swap
 
-SRCS =	ft_atoi.c ft_isdigit.c push_swap.c check.c stack.c\
+SRCS =	ft_atoi.c ft_isdigit.c push_swap.c check.c stack.c list_functions.c\
 
 OBJS = ${patsubst %.c,%.o,${SRCS}}
 
