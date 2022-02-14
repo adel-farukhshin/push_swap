@@ -11,4 +11,11 @@ typedef struct s_stack {
 } t_stack;
 
 
+t_stack  *lstnew(void  *data);
+void	lstadd_front(t_stack **lst, t_stack *new);
+int	lstsize(t_stack *list);
+t_stack	*lstlast(t_stack *list);
+void	lstadd_back(t_stack **lst, t_stack *new);
+
+
 #endif
