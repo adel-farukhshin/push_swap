@@ -20,5 +20,6 @@ int	main (int argc, char **argv)
 		return (-1);
 	a = stack_init(argc, argv);
 	stack_printf(a);
-
+	i = is_final(a);
+	printf("is final: %d\n", i);
 }

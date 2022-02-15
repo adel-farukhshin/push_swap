@@ -11,6 +11,8 @@ typedef struct s_stack {
 } t_stack;
 
 t_stack	*stack_init(int argc, char **argv);
+int		is_final(t_stack *a);
+
 
 t_stack  *lstnew(int data);
 void	lstadd_front(t_stack **lst, t_stack *new);
