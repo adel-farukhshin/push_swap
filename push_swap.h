@@ -26,5 +26,5 @@ void 	stack_printf(t_stack *a);
 
 void	s(t_stack **a);
 void	p(t_stack **src, t_stack **dst);
-
+void	r(t_stack **src);
 #endif
