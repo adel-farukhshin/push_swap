@@ -11,3 +11,14 @@ void	s(t_stack **a)
 	(*a)->next = tmp;
 }
 
+void	pb(t_stack **a, t_stack **b)
+{
+	t_stack	*tmp;
+
+	if (*a)
+	{
+		tmp = (*a)->next;
+		lstadd_front(b, (*a));
+		*a = tmp;
+	}
+}
