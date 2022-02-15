@@ -18,5 +18,6 @@ int	lstsize(t_stack *list);
 t_stack	*lstlast(t_stack *list);
 void	lstadd_back(t_stack **lst, t_stack *new);
 
+void 	stack_printf(t_stack *a);
 
 #endif
