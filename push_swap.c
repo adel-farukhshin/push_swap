@@ -18,6 +18,8 @@ int	main (int argc, char **argv)
 	printf("check out %d\n", i);
 	a = stack_init(argc, argv);
 	stack_printf(a);
+	i = is_sorted(a);
+	printf("is sorted: %d\n", i);
 	i = is_final(a);
 	printf("is final: %d\n", i);
 }

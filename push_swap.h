@@ -11,6 +11,7 @@ typedef struct s_stack {
 } t_stack;
 
 t_stack	*stack_init(int argc, char **argv);
+int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 
 
