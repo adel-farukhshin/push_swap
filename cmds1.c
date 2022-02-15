@@ -33,3 +33,18 @@ void	r(t_stack **src)
 	tmp->next = NULL;
 	lstadd_back(src, tmp);
 }
+
+void	rr(t_stack **src)
+{
+	t_stack	*tmp;
+	t_stack	*prev;
+
+	tmp = *src;
+	while (tmp->next)
+	{
+		prev = tmp;
+		tmp = tmp->next;
+	}
+	prev->next = NULL;
+	lstadd_front(src, tmp);
+}
