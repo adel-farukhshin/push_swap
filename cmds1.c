@@ -11,14 +11,14 @@ void	s(t_stack **a)
 	(*a)->next = tmp;
 }
 
-void	pb(t_stack **a, t_stack **b)
+void	p(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;
 
-	if (*a)
+	if (*src)
 	{
-		tmp = (*a)->next;
-		lstadd_front(b, (*a));
-		*a = tmp;
+		tmp = (*src)->next;
+		lstadd_front(dst, (*src));
+		*src = tmp;
 	}
 }

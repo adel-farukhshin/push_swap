@@ -25,6 +25,6 @@ void	lstadd_back(t_stack **lst, t_stack *new);
 void 	stack_printf(t_stack *a);
 
 void	s(t_stack **a);
-void	pb(t_stack **a, t_stack **b);
+void	p(t_stack **src, t_stack **dst);
 
 #endif
