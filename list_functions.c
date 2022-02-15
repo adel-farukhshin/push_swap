@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "push_swap.h"
 
-t_stack  *lstnew(void  *data)
+t_stack  *lstnew(int data)
 {
     t_stack  *a;
 
