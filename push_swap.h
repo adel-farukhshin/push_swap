@@ -10,6 +10,7 @@ typedef struct s_stack {
 	struct s_list	*next;
 } t_stack;
 
+t_stack	*stack_init(int argc, char **argv);
 
 t_stack  *lstnew(void  *data);
 void	lstadd_front(t_stack **lst, t_stack *new);
