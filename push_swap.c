@@ -18,6 +18,7 @@ int	main (int argc, char **argv)
 	i = check(argc, argv);
 	printf("check out %d\n", i);
 	a = stack_init(argc, argv);
+	b = NULL;
 	stack_printf(a);
 	i = is_sorted(a);
 	printf("is sorted: %d\n", i);
