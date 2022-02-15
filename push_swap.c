@@ -16,8 +16,6 @@ int	main (int argc, char **argv)
 
 	i = check(argc, argv);
 	printf("check out %d\n", i);
-	if (i == -1)
-		return (-1);
 	a = stack_init(argc, argv);
 	stack_printf(a);
 	i = is_final(a);
