@@ -58,13 +58,15 @@ int	check (int argc, char **argv)
 	int	*arr;
 	int	i;
 
+	if (argc == 1)
+		exit (-1);
 	arr = (int *) malloc(sizeof(int *) + (argc - 1) * sizeof(int));
 	i = check_nb(argc, argv, arr);
 	if (i == -1)
-		return (-1);
+		exit (-1);
 	i = check_dup(i, arr);
 	if (i == -1)
-		return (-1);
+		exit (-1);
 	free(arr);
-	return (0);
+	return (1);
 }
