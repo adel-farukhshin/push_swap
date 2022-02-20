@@ -14,7 +14,7 @@ t_stack	*stack_init(int argc, char **argv);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 
-void sort(t_stack *a, t_stack *b);
+void sort(t_stack *a, t_stack *b, int argc);
 
 t_stack  *lstnew(int data);
 void	lstadd_front(t_stack **lst, t_stack *new);

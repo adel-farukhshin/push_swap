@@ -24,7 +24,7 @@ int	main (int argc, char **argv)
 	printf("is sorted: %d\n", i);
 	if (!i)
 	{
-		sort(a, b);
+		sort(a, b, argc);
 	}
 	i = is_final(a);
 	printf("is final: %d\n", i);
