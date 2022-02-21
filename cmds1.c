@@ -24,6 +24,20 @@ void	s(t_stack **a)
 	(*a)->next = tmp;
 }
 
+void	pb(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	if (stacks->a)
+	{
+		tmp = (stacks->a)->next;
+		lstadd_front(&(*stacks).b, stacks->a);
+		stacks->a = tmp;
+		stacks->la--;
+		stacks->lb++;
+	}
+}
+
 void	p(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;

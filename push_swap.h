@@ -48,6 +48,7 @@ void	stacks_printf(t_stack *a, t_stack *b);
 
 void	s(t_stack **a);
 void	p(t_stack **src, t_stack **dst);
+void	pb(t_stacks *stacks);
 void	r(t_stack **src);
 void	rr(t_stack **src);
 #endif
