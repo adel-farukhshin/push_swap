@@ -30,9 +30,7 @@ int	main (int argc, char **argv)
 
 	i = check(argc, argv);
 	printf("check out %d\n", i);
-	stacks = malloc(sizeof(t_stacks *));
-	stacks->a = stack_init(argc, argv);
-	stacks->b = NULL;
+	stacks = stacks_init(argc, argv);
 	stack_printf(stacks->a);
 	i = is_sorted(stacks->a);
 	printf("is sorted: %d\n", i);

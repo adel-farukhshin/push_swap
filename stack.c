@@ -15,19 +15,25 @@
 #include "push_swap.h"
 #include <stdlib.h>
 
-t_stack	*stack_init(int argc, char **argv)
+t_stacks	*stacks_init(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	int		i;
+	t_stacks	*stacks;
+	int			i;
+	t_stack 	*tmp;
+	
+	stacks = malloc(sizeof(t_stacks *));
+	
 
 	i = 1;
-	a = NULL;
+	stacks->a = NULL;
 	while (i < argc)
 	{
-		b = lstnew(ft_atoi(argv[i]));
-		lstadd_back(&a, b);
+		tmp = lstnew(ft_atoi(argv[i]));
+		lstadd_back(&(*stacks).a, tmp);
 		i++;
 	}
-	return (a);
+	stacks->b = NULL;
+	stacks->la = i;
+	stacks->lb = 0;
+	return (stacks);
 }
