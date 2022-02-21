@@ -35,7 +35,7 @@ void	fill_b(t_stack **a, t_stack **b, int argc)
 	int	max;
 	int	i;
 
-	i = 1;
+	i = 0;
 	find_extr((*a), &min, &max);
 	printf("min: %d; max: %d \n", min, max);
 	// printf("b address: %p\n", (*b));
@@ -52,13 +52,18 @@ void	fill_b(t_stack **a, t_stack **b, int argc)
 
 }
 
-void sort(t_stack *a, t_stack *b, int argc)
+// void	score(t_stack **stack)
+// {
+
+// }
+
+void sort(t_stacks *stacks)
 {
 	
-	fill_b(&a, &b, argc);
+	fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
 	// printf("b address after fill_b: %p\n", b);
 	printf("after fill b\n");
-	stacks_printf(a, b);
+	stacks_printf(stacks->a, stacks->b);
 
 	// stacks_printf(a, b);
 	

@@ -36,8 +36,10 @@ int	main (int argc, char **argv)
 	printf("is sorted: %d\n", i);
 	if (!i)
 	{
-		sort(stacks->a, stacks->b, argc);
+		sort(stacks);
 	}
+	printf("after sort\n");
+	stacks_printf(stacks->a, stacks->b);
 	i = is_final(stacks->a);
 	printf("is final: %d\n", i);
 }
