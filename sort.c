@@ -64,10 +64,21 @@ void	fill_b(t_stacks *stacks)
 
 }
 
-// void	score(t_stack *b)
-// {
+void	score(t_stack *b, int lb)
+{
+	int	pos;
 
-// }
+	pos = 0;
+	while (b)
+	{
+		if (pos < lb / 2)
+			b->bscore = pos;
+		else 
+			b->bscore = lb - pos;
+		b = b->next;
+	}
+	
+}
 
 void sort(t_stacks *stacks)
 {
@@ -77,7 +88,8 @@ void sort(t_stacks *stacks)
 	// printf("b address after fill_b: %p\n", b);
 	printf("after fill b\n");
 	stacks_printf(stacks->a, stacks->b);
-
+	score(stacks->b, stacks->lb);
+	stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(a, b);
 	
 	// s(&a);
