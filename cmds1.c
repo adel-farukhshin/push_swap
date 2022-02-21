@@ -64,6 +64,16 @@ void	p(t_stack **src, t_stack **dst)
 	}
 }
 
+void	rb(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	tmp = stacks->b;
+	stacks->b = (stacks->b)->next;
+	tmp->next = NULL;
+	lstadd_back(&(*stacks).b, tmp);
+}
+
 void	r(t_stack **src)
 {
 	t_stack	*tmp;
