@@ -158,7 +158,34 @@ void perform(t_stacks *stacks)
 	t_stack *cur;
 
 	cur = sum(stacks->b);
-	printf("%d ", cur->data);
+	while (cur->bscore > 0)
+	{
+		rb(stacks);
+		cur->bscore--;
+	}
+	while (cur->bscore < 0)
+	{
+		rrb(stacks);
+		cur->bscore++;
+	}
+
+	while (cur->ascore > 0)
+	{
+		ra(stacks);
+		cur->ascore--;
+	}
+	while (cur->ascore < 0)
+	{
+		rra(stacks);
+		cur->ascore++;
+	}
+	// rb(stacks);
+	// ra(stacks);
+	// stacks_printf(stacks->a, stacks->b);
+	// rra(stacks);
+	// rrb(stacks);
+	// stacks_printf(stacks->a, stacks->b);
+	// printf("%d ", cur->data);
 	
 }
 
@@ -166,20 +193,22 @@ void sort(t_stacks *stacks)
 {
 	fill_b(stacks);
 	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
+	while(stacks->b)
+	{
+		// printf("b address after fill_b: %p\n", b);
+		// printf("after fill b\n");
+		stacks_printf(stacks->a, stacks->b);
+		score(stacks);
+		ascore_printf(stacks->b);
+		bscore_printf(stacks->b);
+		// printf("after score\n");
+		fill_pos(stacks);
+		// pos_printf(stacks->a);
+		// pos_printf(stacks->b);
 
-	// printf("b address after fill_b: %p\n", b);
-	printf("after fill b\n");
-	stacks_printf(stacks->a, stacks->b);
-	score(stacks);
-	// ascore_printf(stacks->b);
-	// bscore_printf(stacks->b);
-	printf("after score\n");
-	fill_pos(stacks);
-	// pos_printf(stacks->a);
-	// pos_printf(stacks->b);
-
-	perform(stacks);
-
+		perform(stacks);
+		pa(stacks);
+	}
 	// pa(stacks);
 	stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(stacks->a, stacks->b);
