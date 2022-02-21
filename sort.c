@@ -39,18 +39,21 @@ void	fill_b(t_stacks *stacks)
 	find_extr(stacks->a, &min, &max);
 	printf("min: %d; max: %d \n", min, max);
 	// printf("b address: %p\n", (*b));
-	// printf("la %d\n", stacks->la);
-	
+	printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	stacks_printf(stacks->a, stacks->b);
+
 	while (stacks->la != 2)
 	{
 		if ((stacks->a)->data != min && (stacks->a)->data != max)
 		{
-			p(&(*stacks).a, &(*stacks).b);
-			stacks->la--;
-			stacks->lb++;
+			pb(stacks);
+			printf("pb\n");
 		}
 		else //if (i + 1 < stacks->la)
+		{
 			r(&(*stacks).a);
+			printf("ra\n");
+		}
 		stacks_printf(stacks->a, stacks->b);
 		// i++;
 		
