@@ -33,7 +33,7 @@ t_stacks	*stacks_init(int argc, char **argv)
 		i++;
 	}
 	stacks->b = NULL;
-	stacks->la = i;
+	stacks->la = i - 1;
 	stacks->lb = 0;
 	return (stacks);
 }
