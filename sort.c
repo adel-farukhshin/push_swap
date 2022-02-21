@@ -29,38 +29,39 @@ void find_extr(t_stack *a, int *min, int *max)
 	}
 }
 
-void	fill_b(t_stack **a, t_stack **b, int argc)
+void	fill_b(t_stacks *stacks)
 {
 	int	min;
 	int	max;
 	int	i;
 
 	i = 0;
-	find_extr((*a), &min, &max);
+	find_extr(stacks->a, &min, &max);
 	printf("min: %d; max: %d \n", min, max);
 	// printf("b address: %p\n", (*b));
-	while (i < argc)
+	while (i < stacks->la)
 	{
-		if ((*a)->data != min && (*a)->data != max)
-			p(a, b);
-		else if (i + 1 < argc)
-			r(a);
-		stacks_printf((*a), (*b));
+		if ((stacks->a)->data != min && (stacks->a)->data != max)
+			p(&(*stacks).a, &(*stacks).b);
+		else if (i + 1 < stacks->la)
+			r(&(*stacks).a);
+		stacks_printf(stacks->a, stacks->b);
 		i++;
 	}
 	// printf("b address after while: %p\n", (*b));
 
 }
 
-// void	score(t_stack **stack)
+// void	score(t_stack *b)
 // {
 
 // }
 
 void sort(t_stacks *stacks)
 {
-	
-	fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
+	fill_b(stacks);
+	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
+
 	// printf("b address after fill_b: %p\n", b);
 	printf("after fill b\n");
 	stacks_printf(stacks->a, stacks->b);
