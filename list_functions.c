@@ -19,7 +19,7 @@ t_stack  *lstnew(int data)
 {
     t_stack  *a;
 
-    a = malloc(sizeof(a));
+    a = malloc(sizeof(t_stack));
     a->data = data;
 	a->next = NULL;
     return (a);
