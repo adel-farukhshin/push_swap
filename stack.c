@@ -37,3 +37,22 @@ t_stacks	*stacks_init(int argc, char **argv)
 	stacks->lb = 0;
 	return (stacks);
 }
+
+void	free_stacks(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	while(stacks->a)
+	{
+		tmp = stacks->a;
+		stacks->a = (stacks->a)->next;
+		free(tmp);
+	}
+	while(stacks->b)
+	{
+		tmp = stacks->b;
+		stacks->b = (stacks->b)->next;
+		free(tmp);
+	}
+	free(stacks);
+}

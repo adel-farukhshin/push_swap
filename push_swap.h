@@ -19,8 +19,8 @@
 
 typedef struct s_stack {
 	int				data;
-	int				ascore;
-	int				bscore;
+	// unsigned int				ascore;
+	// long int				bscore;
 	struct s_stack	*next;
 } t_stack;
 
@@ -34,6 +34,7 @@ typedef	struct s_stacks
 } t_stacks;
 
 t_stacks	*stacks_init(int argc, char **argv);
+void	free_stacks(t_stacks *stacks);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 

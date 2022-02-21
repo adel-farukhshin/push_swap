@@ -42,4 +42,5 @@ int	main (int argc, char **argv)
 	stacks_printf(stacks->a, stacks->b);
 	i = is_final(stacks->a);
 	printf("is final: %d\n", i);
+	free_stacks(stacks);
 }
