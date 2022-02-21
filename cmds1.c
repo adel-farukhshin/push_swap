@@ -38,6 +38,20 @@ void	pb(t_stacks *stacks)
 	}
 }
 
+void	pa(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	if (stacks->b)
+	{
+		tmp = (stacks->b)->next;
+		lstadd_front(&(*stacks).a, stacks->b);
+		stacks->b = tmp;
+		stacks->lb--;
+		stacks->la++;
+	}
+}
+
 void	p(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;

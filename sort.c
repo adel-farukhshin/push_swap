@@ -94,7 +94,7 @@ void	score(t_stacks *stacks)
 		else
 			tmp->bscore = pos;
 		scorea(stacks->a, stacks->la, tmp);
-		printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
+		// printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
 		pos++;
 		tmp = tmp->next;
 	}
@@ -110,9 +110,10 @@ void sort(t_stacks *stacks)
 	printf("after fill b\n");
 	stacks_printf(stacks->a, stacks->b);
 	score(stacks);
-	// score(stacks->b, stacks->lb);
+	pa(stacks);
+	stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(stacks->a, stacks->b);
-	printf("b: ");
+	// printf("b: ");
 	// bscore_printf(stacks->b);
 	// stacks_printf(a, b);
 	
