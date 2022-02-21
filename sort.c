@@ -71,11 +71,13 @@ void	score(t_stack *b, int lb)
 	pos = 0;
 	while (b)
 	{
-		if (pos < lb / 2)
-			b->bscore = pos;
-		else 
+		if (pos > lb / 2)
 			b->bscore = lb - pos;
-		// printf("%d ", b->bscore);
+		else
+			b->bscore = pos;
+			
+		printf("%d ", b->bscore);
+		pos++;
 		b = b->next;
 	}
 	
@@ -90,8 +92,8 @@ void sort(t_stacks *stacks)
 	printf("after fill b\n");
 	stacks_printf(stacks->a, stacks->b);
 	score(stacks->b, stacks->lb);
-	stacks_printf(stacks->a, stacks->b);
-	// printf("b: ");
+	// stacks_printf(stacks->a, stacks->b);
+	printf("b: ");
 	bscore_printf(stacks->b);
 	// stacks_printf(a, b);
 	
