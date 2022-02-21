@@ -21,6 +21,7 @@ t_stack  *lstnew(int data)
 
     a = malloc(sizeof(t_stack));
     a->data = data;
+	a->ps = 0;
 	a->next = NULL;
     return (a);
 }
