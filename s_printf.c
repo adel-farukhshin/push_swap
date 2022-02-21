@@ -55,3 +55,14 @@ void	ascore_printf(t_stack *a)
 	}
 	printf("\n");
 }
+
+void	pos_printf(t_stack *a)
+{
+	printf("pos : ");
+	while (a)
+	{
+		printf("%d ", a->ps);
+		a = a->next;
+	}
+	printf("\n");
+}

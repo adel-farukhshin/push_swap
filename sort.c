@@ -107,23 +107,23 @@ void	fill_pos(t_stacks *stacks)
 	int		pos;
 
 	pos = 0;
-	printf("fill_pos\n_________________\n");
-	printf("a : ");
+	// printf("fill_pos\n_________________\n");
+	// printf("a : ");
 	tmp = stacks->a;
 	while (tmp)
 	{
 		tmp->ps = pos;
-		printf(" %d ", tmp->ps);
+		// printf(" %d ", tmp->ps);
 		pos++;
 		tmp = tmp->next;
 	}
 	pos = 0;
-	printf("\nb : ");
+	// printf("\nb : ");
 	tmp = stacks->b;
 	while (tmp)
 	{
 		tmp->ps = pos;
-		printf(" %d ", tmp->ps);
+		// printf(" %d ", tmp->ps);
 		pos++;
 		tmp = tmp->next;
 	}
@@ -139,9 +139,12 @@ void sort(t_stacks *stacks)
 	printf("after fill b\n");
 	stacks_printf(stacks->a, stacks->b);
 	score(stacks);
+	ascore_printf(stacks->b);
 	bscore_printf(stacks->b);
 	printf("after score\n");
 	fill_pos(stacks);
+	pos_printf(stacks->a);
+	pos_printf(stacks->b);
 	// pa(stacks);
 	stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(stacks->a, stacks->b);
