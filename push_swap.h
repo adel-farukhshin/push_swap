@@ -22,6 +22,16 @@ typedef struct s_stack {
 	struct s_stack	*next;
 } t_stack;
 
+typedef	struct s_stacks
+{
+	struct s_stack *a;
+	struct s_stack *b;
+	int				la;
+	int				lb;
+	
+} t_stacks;
+
+
 t_stack	*stack_init(int argc, char **argv);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);

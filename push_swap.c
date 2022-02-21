@@ -17,27 +17,29 @@
 
 #include <stdio.h>
 
-
+#include <stdlib.h>
 
 
 
 int	main (int argc, char **argv)
 {
 	int		i;
-	t_stack	*a;
-	t_stack	*b;
+	t_stacks	*stacks;
+	// t_stack	*a;
+	// t_stack	*b;
 
 	i = check(argc, argv);
 	printf("check out %d\n", i);
-	a = stack_init(argc, argv);
-	b = NULL;
-	stack_printf(a);
-	i = is_sorted(a);
+	stacks = malloc(sizeof(t_stacks *));
+	stacks->a = stack_init(argc, argv);
+	stacks->b = NULL;
+	stack_printf(stacks->a);
+	i = is_sorted(stacks->a);
 	printf("is sorted: %d\n", i);
 	if (!i)
 	{
-		sort(a, b, argc);
+		sort(stacks->a, stacks->b, argc);
 	}
-	i = is_final(a);
+	i = is_final(stacks->a);
 	printf("is final: %d\n", i);
 }
