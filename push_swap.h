@@ -49,6 +49,7 @@ void	lstadd_back(t_stack **lst, t_stack *new);
 
 void 	stack_printf(t_stack *a);
 void	stacks_printf(t_stack *a, t_stack *b);
+void	ascore_printf(t_stack *a);
 void	bscore_printf(t_stack *a);
 
 void	s(t_stack **a);

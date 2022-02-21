@@ -36,9 +36,21 @@ void	stack_printf(t_stack *a)
 
 void	bscore_printf(t_stack *a)
 {
+	printf("b score: ");
 	while (a)
 	{
 		printf("%d ", a->bscore);
+		a = a->next;
+	}
+	printf("\n");
+}
+
+void	ascore_printf(t_stack *a)
+{
+	printf("a score: ");
+	while (a)
+	{
+		printf("%d ", a->ascore);
 		a = a->next;
 	}
 	printf("\n");
