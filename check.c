@@ -15,6 +15,8 @@
 #include <stdio.h>
 #include "push_swap.h"
 
+// put error (in strerror): not integer, bigger than int, dupes
+// else: prompt back
 static int	check_nb(int argc, char **argv, int *arr)
 {
 	int	j;
