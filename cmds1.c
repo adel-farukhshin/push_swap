@@ -94,6 +94,22 @@ void	r(t_stack **src)
 	lstadd_back(src, tmp);
 }
 
+void	rra(t_stacks *stacks)
+{
+	t_stack	*tmp;
+	t_stack	*prev;
+
+	tmp = stacks->a;
+	while (tmp->next)
+	{
+		prev = tmp;
+		tmp = tmp->next;
+	}
+	prev->next = NULL;
+	lstadd_front(&(*stacks).a, tmp);
+
+}
+
 void	rr(t_stack **src)
 {
 	t_stack	*tmp;

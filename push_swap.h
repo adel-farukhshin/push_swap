@@ -60,5 +60,6 @@ void	pa(t_stacks *stacks);
 void	r(t_stack **src);
 void	rb(t_stacks *stacks);
 void	ra(t_stacks *stacks);
+void	rra(t_stacks *stacks);
 void	rr(t_stack **src);
 #endif
