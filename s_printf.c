@@ -33,3 +33,13 @@ void	stack_printf(t_stack *a)
 		a = a->next;
 	}
 }
+
+void	bscore_printf(t_stack *a)
+{
+	while (a)
+	{
+		printf("%d ", a->bscore);
+		a = a->next;
+	}
+	printf("\n");
+}

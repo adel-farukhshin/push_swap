@@ -19,8 +19,8 @@
 
 typedef struct s_stack {
 	int				data;
-	// unsigned int				ascore;
-	// long int				bscore;
+	// int				ascore;
+	int				bscore;
 	struct s_stack	*next;
 } t_stack;
 
@@ -48,6 +48,7 @@ void	lstadd_back(t_stack **lst, t_stack *new);
 
 void 	stack_printf(t_stack *a);
 void	stacks_printf(t_stack *a, t_stack *b);
+void	bscore_printf(t_stack *a);
 
 void	s(t_stack **a);
 void	p(t_stack **src, t_stack **dst);

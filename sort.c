@@ -75,6 +75,7 @@ void	score(t_stack *b, int lb)
 			b->bscore = pos;
 		else 
 			b->bscore = lb - pos;
+		// printf("%d ", b->bscore);
 		b = b->next;
 	}
 	
@@ -90,6 +91,8 @@ void sort(t_stacks *stacks)
 	stacks_printf(stacks->a, stacks->b);
 	score(stacks->b, stacks->lb);
 	stacks_printf(stacks->a, stacks->b);
+	// printf("b: ");
+	bscore_printf(stacks->b);
 	// stacks_printf(a, b);
 	
 	// s(&a);
