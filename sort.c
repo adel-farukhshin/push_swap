@@ -75,7 +75,7 @@ void	scorea(t_stack *a, int la, t_stack *cur)
 		a = a->next;
 	}
 	if (pos > la / 2)
-		cur->ascore = la - pos;
+		cur->ascore = -(la - pos);
 	else
 		cur->ascore = pos;
 }
@@ -90,7 +90,7 @@ void	score(t_stacks *stacks)
 	while (tmp)
 	{
 		if (pos > (stacks->lb) / 2)
-			tmp->bscore = stacks->lb - pos;
+			tmp->bscore = -(stacks->lb - pos);
 		else
 			tmp->bscore = pos;
 		scorea(stacks->a, stacks->la, tmp);
@@ -129,6 +129,15 @@ void	fill_pos(t_stacks *stacks)
 	
 }
 
+int	mod(int q)
+{
+	if (q < 0)
+		return (q * (-1));
+	else
+		return (q);
+}
+
+
 t_stack *sum(t_stack *b)
 {
 	t_stack	*tmp;
@@ -136,7 +145,8 @@ t_stack *sum(t_stack *b)
 	tmp = b;
 	while(b)
 	{
-		if ((tmp->ascore + tmp->bscore) > (b->ascore + b->bscore))
+		if ((mod(tmp->ascore) + mod(tmp->bscore)) >
+			(mod(b->ascore) + mod(b->bscore)))
 			tmp = b;
 		b = b->next;
 	}
