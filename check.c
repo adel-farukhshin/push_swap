@@ -32,6 +32,7 @@ static int	check_nb(int argc, char **argv, int *arr)
 			if (!ft_isdigit(argv[argc - 1][j]))
 			{
 				free(arr);
+				ft_printf("Error!\n");
 				return (-1);
 			}
 			j++;
@@ -57,6 +58,7 @@ static int	check_dup(int i, int *arr)
 			if (arr[j] == arr[i - 1])
 			{
 				free(arr);
+				ft_printf("Error!\n");
 				return (-1);
 			}
 			j++;
