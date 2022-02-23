@@ -240,3 +240,45 @@ void sort(t_stacks *stacks)
 	// stack_printf(a);
 
 }
+
+void f_sort(t_stacks *stacks)
+{
+	int	pos;
+	int	tpos;
+	int	min;
+	t_stack *tmp;
+
+	pos = 0;
+	tpos = 0;
+	tmp = stacks->a;
+	min = tmp->data;
+	while (tmp)
+	{
+		if (tmp->data < min)
+		{
+			min = tmp->data;
+			tpos = pos;
+		}
+		pos++;
+		tmp = tmp->next;
+	}
+	pos = tpos;
+	// printf("pos %d\n", pos);
+	if (pos > stacks->la / 2)
+		pos = -(stacks->la - pos);
+	// printf("pos %d\n", pos);
+	while (pos > 0)
+	{
+		ra(stacks);
+		pos--;
+	}
+	// printf("after -- pos %d\n", pos);
+	while (pos < 0)
+	{
+		rra(stacks);
+		pos++;
+	}
+	// printf("after ++ pos %d\n", pos);
+	// stacks_printf(stacks->a, stacks->b);
+
+}
