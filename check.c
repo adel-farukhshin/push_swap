@@ -17,7 +17,7 @@
 
 // put error (in strerror): not integer, bigger than int, dupes
 // else: prompt back
-static int	check_nb(int argc, char **argv, int *arr)
+static void	check_nb(int argc, char **argv, int *arr)
 {
 	int	j;
 	int	i;
@@ -33,7 +33,7 @@ static int	check_nb(int argc, char **argv, int *arr)
 			{
 				free(arr);
 				ft_printf("Error!\n");
-				return (-1);
+				exit (-1);
 			}
 			j++;
 		}
@@ -42,10 +42,9 @@ static int	check_nb(int argc, char **argv, int *arr)
 		i++;
 		argc--;
 	}
-	return (i);
 }
 
-static int	check_dup(int i, int *arr)
+static void	check_dup(int i, int *arr)
 {
 	int	j;
 
@@ -59,30 +58,23 @@ static int	check_dup(int i, int *arr)
 			{
 				free(arr);
 				ft_printf("Error!\n");
-				return (-1);
+				exit (-1);
 			}
 			j++;
 		}
 		j = 0;
 		i--;
 	}
-	return (0);
 }
 
-int	check (int argc, char **argv)
+void	check (int argc, char **argv)
 {
 	int	*arr;
-	int	i;
 
 	if (argc == 1)
 		exit (-1);
 	arr = (int *) malloc(sizeof(int *) + (argc - 1) * sizeof(int));
-	i = check_nb(argc, argv, arr);
-	if (i == -1)
-		exit (-1);
-	i = check_dup(i, arr);
-	if (i == -1)
-		exit (-1);
+	check_nb(argc, argv, arr);
+	check_dup(argc - 1, arr);
 	free(arr);
-	return (1);
 }

@@ -29,7 +29,7 @@ int	main (int argc, char **argv)
 	// t_stack	*a;
 	// t_stack	*b;
 
-	i = check(argc, argv);
+	check(argc, argv);
 	// ft_printf("check out %d\n", i);
 	stacks = stacks_init(argc, argv);
 	// stack_printf(stacks->a);
