@@ -29,21 +29,21 @@ int	main (int argc, char **argv)
 	// t_stack	*b;
 
 	i = check(argc, argv);
-	printf("check out %d\n", i);
+	// printf("check out %d\n", i);
 	stacks = stacks_init(argc, argv);
-	stack_printf(stacks->a);
+	// stack_printf(stacks->a);
 	i = is_sorted(stacks->a);
-	printf("is sorted: %d\n", i);
+	// printf("is sorted: %d\n", i);
 	if (!i)
 	{
 		sort(stacks);
 	}
-	printf("after sort\n");
-	stacks_printf(stacks->a, stacks->b);
+	// printf("after sort\n");
+	// stacks_printf(stacks->a, stacks->b);
 	i = is_final(stacks->a);
-	printf("is final: %d\n", i);
+	// printf("is final: %d\n", i);
 	if (!i)
 		f_sort(stacks);
-	stacks_printf(stacks->a, stacks->b);
+	// stacks_printf(stacks->a, stacks->b);
 	free_stacks(stacks);
 }

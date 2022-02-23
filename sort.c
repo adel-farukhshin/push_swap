@@ -37,29 +37,30 @@ void	fill_b(t_stacks *stacks)
 
 	// i = 0;
 	find_extr(stacks->a, &min, &max);
-	printf("min: %d; max: %d \n", min, max);
+	// printf("min: %d; max: %d \n", min, max);
 	// printf("b address: %p\n", (*b));
-	printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
-	stacks_printf(stacks->a, stacks->b);
+	// printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	// stacks_printf(stacks->a, stacks->b);
 
 	while (stacks->la != 2)
 	{
 		if ((stacks->a)->data != min && (stacks->a)->data != max)
 		{
 			pb(stacks);
-			printf("pb\n");
+			// printf("pb\n");
 		}
 		else //if (i + 1 < stacks->la)
 		{
+			// change to ra
 			r(&(*stacks).a);
 			printf("ra\n");
 		}
-		stacks_printf(stacks->a, stacks->b);
+		// stacks_printf(stacks->a, stacks->b);
 		// i++;
 		
 	}
 	
-	printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	// printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
 	// printf("b address after while: %p\n", (*b));
 
 }
@@ -203,10 +204,10 @@ void sort(t_stacks *stacks)
 	{
 		// printf("b address after fill_b: %p\n", b);
 		// printf("after fill b\n");
-		stacks_printf(stacks->a, stacks->b);
+		// stacks_printf(stacks->a, stacks->b);
 		score(stacks);
-		ascore_printf(stacks->b);
-		bscore_printf(stacks->b);
+		// ascore_printf(stacks->b);
+		// bscore_printf(stacks->b);
 		// printf("after score\n");
 		fill_pos(stacks);
 		// pos_printf(stacks->a);
@@ -216,7 +217,7 @@ void sort(t_stacks *stacks)
 		pa(stacks);
 	}
 	// pa(stacks);
-	stacks_printf(stacks->a, stacks->b);
+	// stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(stacks->a, stacks->b);
 	// printf("b: ");
 	// bscore_printf(stacks->b);
