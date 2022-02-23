@@ -13,6 +13,7 @@
 
 
 #include "push_swap.h"
+#include "ft_printf.h"
 
 
 #include <stdio.h>

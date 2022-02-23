@@ -9,6 +9,8 @@ OBJS = ${patsubst %.c,%.o,${SRCS}}
 
 D_FILES = ${patsubst %.c,%.d,${SRCS}}
 
+LIBDIR = "../ft_printf"
+LIB = "ftprintf"
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -23,7 +25,7 @@ bonus : ${OBJSB}
 	ar rc ${NAME} $?
 
 ${NAME} : ${OBJS} 
-	${CC} ${LDFLAGS} $^ -o $@
+	${CC} ${LDFLAGS} $^ -o $@ -L. -l${LIB}
 
 
 
