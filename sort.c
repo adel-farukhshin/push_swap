@@ -67,14 +67,18 @@ void	fill_b(t_stacks *stacks)
 void	scorea(t_stack *a, int la, t_stack *cur)
 {
 	int	pos;
+	int	tpos;
 
-	pos = 0;
-	// while (cur->data < (a->next)->data)
-	while (cur->data > a->data)
+	pos = 1;
+	tpos = 0;
+	while (a->next)
 	{
+		if (cur->data > a->data && cur->data < (a->next)->data)
+			tpos = pos;
 		pos++;
 		a = a->next;
 	}
+	pos = tpos;
 	if (pos > la / 2)
 		cur->ascore = -(la - pos);
 	else
@@ -208,7 +212,7 @@ void sort(t_stacks *stacks)
 		// pos_printf(stacks->a);
 		// pos_printf(stacks->b);
 
-		// perform(stacks);
+		perform(stacks);
 		pa(stacks);
 	}
 	// pa(stacks);
