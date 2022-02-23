@@ -52,8 +52,8 @@ void	fill_b(t_stacks *stacks)
 		else //if (i + 1 < stacks->la)
 		{
 			// change to ra
-			r(&(*stacks).a);
-			ft_printf("ra\n");
+			ra(stacks);
+			// ft_printf("ra\n");
 		}
 		// stacks_printf(stacks->a, stacks->b);
 		// i++;
