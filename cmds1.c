@@ -12,7 +12,7 @@
 
 
 #include "push_swap.h"
-#include <stdlib.h>
+#include "ft_printf.h"
 
 #include <stdio.h>
 
@@ -37,7 +37,7 @@ void	pb(t_stacks *stacks)
 		stacks->a = tmp;
 		stacks->la--;
 		stacks->lb++;
-		printf("pb\n");
+		ft_printf("pb\n");
 	}
 }
 
@@ -52,7 +52,7 @@ void	pa(t_stacks *stacks)
 		stacks->b = tmp;
 		stacks->lb--;
 		stacks->la++;
-		printf("pa\n");
+		ft_printf("pa\n");
 	}
 }
 
@@ -76,7 +76,7 @@ void	ra(t_stacks *stacks)
 	stacks->a = (stacks->a)->next;
 	tmp->next = NULL;
 	lstadd_back(&(*stacks).a, tmp);
-	printf("ra\n");
+	ft_printf("ra\n");
 }
 
 void	rb(t_stacks *stacks)
@@ -87,7 +87,7 @@ void	rb(t_stacks *stacks)
 	stacks->b = (stacks->b)->next;
 	tmp->next = NULL;
 	lstadd_back(&(*stacks).b, tmp);
-	printf("rb\n");
+	ft_printf("rb\n");
 }
 
 void	r(t_stack **src)
@@ -113,7 +113,7 @@ void	rra(t_stacks *stacks)
 	}
 	prev->next = NULL;
 	lstadd_front(&(*stacks).a, tmp);
-	printf("rra\n");
+	ft_printf("rra\n");
 }
 
 void	rrb(t_stacks *stacks)
@@ -129,7 +129,7 @@ void	rrb(t_stacks *stacks)
 	}
 	prev->next = NULL;
 	lstadd_front(&(*stacks).b, tmp);
-	printf("rrb\n");
+	ft_printf("rrb\n");
 }
 
 void	rr(t_stack **src)

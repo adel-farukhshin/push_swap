@@ -13,7 +13,7 @@
 
 #include "push_swap.h"
 
-#include <stdio.h>
+#include "ft_printf.h"
 
 void find_extr(t_stack *a, int *min, int *max)
 {
@@ -37,9 +37,9 @@ void	fill_b(t_stacks *stacks)
 
 	// i = 0;
 	find_extr(stacks->a, &min, &max);
-	// printf("min: %d; max: %d \n", min, max);
-	// printf("b address: %p\n", (*b));
-	// printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	// ft_printf("min: %d; max: %d \n", min, max);
+	// ft_printf("b address: %p\n", (*b));
+	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
 	// stacks_printf(stacks->a, stacks->b);
 
 	while (stacks->la != 2)
@@ -47,21 +47,21 @@ void	fill_b(t_stacks *stacks)
 		if ((stacks->a)->data != min && (stacks->a)->data != max)
 		{
 			pb(stacks);
-			// printf("pb\n");
+			// ft_printf("pb\n");
 		}
 		else //if (i + 1 < stacks->la)
 		{
 			// change to ra
 			r(&(*stacks).a);
-			printf("ra\n");
+			ft_printf("ra\n");
 		}
 		// stacks_printf(stacks->a, stacks->b);
 		// i++;
 		
 	}
 	
-	// printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
-	// printf("b address after while: %p\n", (*b));
+	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	// ft_printf("b address after while: %p\n", (*b));
 
 }
 
@@ -100,11 +100,11 @@ void	score(t_stacks *stacks)
 		else
 			tmp->bscore = pos;
 		scorea(stacks->a, stacks->la, tmp);
-		// printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
+		// ft_printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
 		pos++;
 		tmp = tmp->next;
 	}
-	// printf("\n");
+	// ft_printf("\n");
 }
 
 void	fill_pos(t_stacks *stacks)
@@ -113,23 +113,23 @@ void	fill_pos(t_stacks *stacks)
 	int		pos;
 
 	pos = 0;
-	// printf("fill_pos\n_________________\n");
-	// printf("a : ");
+	// ft_printf("fill_pos\n_________________\n");
+	// ft_printf("a : ");
 	tmp = stacks->a;
 	while (tmp)
 	{
 		tmp->ps = pos;
-		// printf(" %d ", tmp->ps);
+		// ft_printf(" %d ", tmp->ps);
 		pos++;
 		tmp = tmp->next;
 	}
 	pos = 0;
-	// printf("\nb : ");
+	// ft_printf("\nb : ");
 	tmp = stacks->b;
 	while (tmp)
 	{
 		tmp->ps = pos;
-		// printf(" %d ", tmp->ps);
+		// ft_printf(" %d ", tmp->ps);
 		pos++;
 		tmp = tmp->next;
 	}
@@ -202,13 +202,13 @@ void sort(t_stacks *stacks)
 	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
 	while(stacks->b)
 	{
-		// printf("b address after fill_b: %p\n", b);
-		// printf("after fill b\n");
+		// ft_printf("b address after fill_b: %p\n", b);
+		// ft_printf("after fill b\n");
 		// stacks_printf(stacks->a, stacks->b);
 		score(stacks);
 		// ascore_printf(stacks->b);
 		// bscore_printf(stacks->b);
-		// printf("after score\n");
+		// ft_printf("after score\n");
 		fill_pos(stacks);
 		// pos_printf(stacks->a);
 		// pos_printf(stacks->b);
@@ -219,7 +219,7 @@ void sort(t_stacks *stacks)
 	// pa(stacks);
 	// stacks_printf(stacks->a, stacks->b);
 	// stacks_printf(stacks->a, stacks->b);
-	// printf("b: ");
+	// ft_printf("b: ");
 	// bscore_printf(stacks->b);
 	// stacks_printf(a, b);
 	
@@ -227,17 +227,17 @@ void sort(t_stacks *stacks)
 	// stack_printf(a);
 	// s(&a);
 	// stack_printf(a);
-	// printf("\n");
+	// ft_printf("\n");
 	// p(&a, &b);
 	// p(&a, &b);
 	// stacks_printf(a, b);
 	// p(&b, &a);
 	// stacks_printf(a, b);
 	// r(&a);
-	// printf("\n----------\n");
+	// ft_printf("\n----------\n");
 	// stack_printf(a);
 	// rr(&a);
-	// printf("\n----------\n");
+	// ft_printf("\n----------\n");
 	// stack_printf(a);
 
 }
@@ -264,22 +264,22 @@ void f_sort(t_stacks *stacks)
 		tmp = tmp->next;
 	}
 	pos = tpos;
-	// printf("pos %d\n", pos);
+	// ft_printf("pos %d\n", pos);
 	if (pos > stacks->la / 2)
 		pos = -(stacks->la - pos);
-	// printf("pos %d\n", pos);
+	// ft_printf("pos %d\n", pos);
 	while (pos > 0)
 	{
 		ra(stacks);
 		pos--;
 	}
-	// printf("after -- pos %d\n", pos);
+	// ft_printf("after -- pos %d\n", pos);
 	while (pos < 0)
 	{
 		rra(stacks);
 		pos++;
 	}
-	// printf("after ++ pos %d\n", pos);
+	// ft_printf("after ++ pos %d\n", pos);
 	// stacks_printf(stacks->a, stacks->b);
 
 }

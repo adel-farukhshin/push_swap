@@ -12,7 +12,7 @@
 
 
 #include <stdlib.h>
-#include <stdio.h>
+#include "ft_printf.h"
 #include "push_swap.h"
 
 // put error (in strerror): not integer, bigger than int, dupes
@@ -53,7 +53,7 @@ static int	check_dup(int i, int *arr)
 	{
 		while (j < i - 1)
 		{
-			// printf ("j %d; i - 1 %d\n", arr[j], arr[i - 1]);
+			// ft_printf ("j %d; i - 1 %d\n", arr[j], arr[i - 1]);
 			if (arr[j] == arr[i - 1])
 			{
 				free(arr);

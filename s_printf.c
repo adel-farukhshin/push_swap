@@ -11,58 +11,58 @@
 /* ************************************************************************** */
 
 
-#include <stdio.h>
+#include "ft_printf.h"
 #include "push_swap.h"
 
 void	stacks_printf(t_stack *a, t_stack *b)
 {
-	printf("\n-----------\n");
-	printf("a: ");
+	ft_printf("\n-----------\n");
+	ft_printf("a: ");
 	stack_printf(a);
-	printf("\n");
-	printf("b: ");
+	ft_printf("\n");
+	ft_printf("b: ");
 	stack_printf(b);
-	printf("\n-----------\n");
+	ft_printf("\n-----------\n");
 }
 
 void	stack_printf(t_stack *a)
 {
 	while (a)
 	{
-		printf("%d ", a->data);
+		ft_printf("%d ", a->data);
 		a = a->next;
 	}
 }
 
 void	bscore_printf(t_stack *a)
 {
-	printf("b score: ");
+	ft_printf("b score: ");
 	while (a)
 	{
-		printf("%d ", a->bscore);
+		ft_printf("%d ", a->bscore);
 		a = a->next;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
 
 void	ascore_printf(t_stack *a)
 {
-	printf("a score: ");
+	ft_printf("a score: ");
 	while (a)
 	{
-		printf("%d ", a->ascore);
+		ft_printf("%d ", a->ascore);
 		a = a->next;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
 
 void	pos_printf(t_stack *a)
 {
-	printf("pos : ");
+	ft_printf("pos : ");
 	while (a)
 	{
-		printf("%d ", a->ps);
+		ft_printf("%d ", a->ps);
 		a = a->next;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
