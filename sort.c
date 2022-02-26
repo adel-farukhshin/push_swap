@@ -68,6 +68,37 @@ void find_extr(t_stack *a, int *min, int *max)
 	}
 }
 
+#define F (stacks->a)->data
+#define S (stacks->a->next)->data
+#define T ((stacks->a->next)->next)->data
+
+void sort_tripple(t_stacks *stacks)
+{
+
+	// 1 3 2
+	if (F < S && S > T)
+	{
+		sa(stacks);
+		ra(stacks);
+	}
+	// 2 3 1
+	else if (F < S && F > T)
+		rra(stacks);
+	// 2 1 3
+	else if (F > S && F < T)
+		sa(stacks);
+	// 3 1 2
+	else if (F > S && S < T)
+		ra(stacks);
+	// 3 2 1
+	else if (F > S && S > T)
+	{
+		sa(stacks);
+		rra(stacks);
+	}
+
+}
+
 void	fill_b(t_stacks *stacks, int *arr)
 {
 	int	min;
@@ -101,7 +132,9 @@ void	fill_b(t_stacks *stacks, int *arr)
 		// i++;
 		
 	}
-	
+	// stacks_printf(stacks->a, stacks->b);
+	sort_tripple(stacks);
+	// stacks_printf(stacks->a, stacks->b);
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
 	// ft_printf("b address after while: %p\n", (*b));
 
@@ -121,6 +154,7 @@ void	scorea(t_stack *a, int la, t_stack *cur)
 		pos++;
 		a = a->next;
 	}
+	// ft_printf("tp %d, p %d\n", tpos, pos);
 	pos = tpos;
 	if (pos > la / 2)
 		cur->ascore = -(la - pos);
