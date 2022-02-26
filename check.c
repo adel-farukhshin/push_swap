@@ -24,7 +24,6 @@ static void	check_nb(int argc, char **argv, int *arr)
 
 	i = 0;
 	j = 0;
-
 	while (argc - 1)
 	{
 		while (argv[argc - 1][j])
