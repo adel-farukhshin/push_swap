@@ -84,9 +84,9 @@ void	fill_b(t_stacks *stacks, int *arr)
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
 	// stacks_printf(stacks->a, stacks->b);
 
-	while (stacks->la != 2)
+	while (stacks->la != 3)
 	{
-		if ((stacks->a)->data != min && (stacks->a)->data != max)
+		if ((stacks->a)->data != min && (stacks->a)->data != max && (stacks->a)->data != med)
 		{
 			pb(stacks);
 			// ft_printf("pb\n");
