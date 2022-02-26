@@ -66,7 +66,7 @@ static void	check_dup(int i, int *arr)
 	}
 }
 
-void	check (int argc, char **argv)
+int	*check (int argc, char **argv)
 {
 	int	*arr;
 
@@ -75,5 +75,5 @@ void	check (int argc, char **argv)
 	arr = (int *) malloc(sizeof(int *) + (argc - 1) * sizeof(int));
 	check_nb(argc, argv, arr);
 	check_dup(argc - 1, arr);
-	free(arr);
+	return (arr);
 }

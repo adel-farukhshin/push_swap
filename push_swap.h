@@ -15,7 +15,7 @@
 # define PUSH_SWAP_H
 	int	ft_isdigit(int c);
 	int	ft_atoi(const char *str, ...);
-	void	check (int argc, char **argv);
+	int	*check (int argc, char **argv);
 
 typedef struct s_stack {
 	int				data;
