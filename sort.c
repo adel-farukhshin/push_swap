@@ -196,7 +196,7 @@ void perform(t_stacks *stacks)
 	
 }
 
-void sort(t_stacks *stacks)
+void sort(t_stacks *stacks, int *arr)
 {
 	fill_b(stacks);
 	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);

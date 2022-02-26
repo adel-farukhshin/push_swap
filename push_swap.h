@@ -39,7 +39,7 @@ void	free_stacks(t_stacks *stacks);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 
-void sort(t_stacks *stacks);
+void sort(t_stacks *stacks, int *arr);
 void f_sort(t_stacks *stacks);
 
 t_stack  *lstnew(int data);

@@ -38,7 +38,7 @@ int	main (int argc, char **argv)
 	// ft_printf("is sorted: %d\n", i);
 	if (!i)
 	{
-		sort(stacks);
+		sort(stacks, arr);
 	}
 	// ft_printf("after sort\n");
 	// stacks_printf(stacks->a, stacks->b);
