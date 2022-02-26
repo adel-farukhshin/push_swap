@@ -76,22 +76,22 @@ void sort_tripple(t_stacks *stacks)
 {
 
 	// 1 3 2
-	if (F < S && S > T)
+	if (F < S && S > T && F < T)
 	{
 		sa(stacks);
 		ra(stacks);
 	}
 	// 2 3 1
-	else if (F < S && F > T)
+	else if (F < S && S > T && F > T)
 		rra(stacks);
 	// 2 1 3
-	else if (F > S && F < T)
+	else if (F > S && S < T && F < T)
 		sa(stacks);
 	// 3 1 2
-	else if (F > S && S < T)
+	else if (F > S && S < T && F > T)
 		ra(stacks);
 	// 3 2 1
-	else if (F > S && S > T)
+	else if (F > S && S > T && F > T)
 	{
 		sa(stacks);
 		rra(stacks);
@@ -113,6 +113,7 @@ void	fill_b(t_stacks *stacks, int *arr)
 	// ft_printf("min: %d; max: %d \n", min, max);
 	// ft_printf("b address: %p\n", (*b));
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
+	
 	// stacks_printf(stacks->a, stacks->b);
 
 	while (stacks->la != 3)
@@ -133,6 +134,7 @@ void	fill_b(t_stacks *stacks, int *arr)
 		
 	}
 	// stacks_printf(stacks->a, stacks->b);
+	
 	sort_tripple(stacks);
 	// stacks_printf(stacks->a, stacks->b);
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
@@ -280,10 +282,14 @@ void sort(t_stacks *stacks, int *arr)
 	{
 		// ft_printf("b address after fill_b: %p\n", b);
 		// ft_printf("after fill b\n");
+		
 		// stacks_printf(stacks->a, stacks->b);
+		
 		score(stacks);
+		
 		// ascore_printf(stacks->b);
 		// bscore_printf(stacks->b);
+		
 		// ft_printf("after score\n");
 		fill_pos(stacks);
 		// pos_printf(stacks->a);
@@ -293,7 +299,9 @@ void sort(t_stacks *stacks, int *arr)
 		pa(stacks);
 	}
 	// pa(stacks);
+	
 	// stacks_printf(stacks->a, stacks->b);
+	
 	// stacks_printf(stacks->a, stacks->b);
 	// ft_printf("b: ");
 	// bscore_printf(stacks->b);
