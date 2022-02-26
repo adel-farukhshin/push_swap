@@ -15,6 +15,45 @@
 
 #include "ft_printf.h"
 
+void bubble_sort(int *arr)
+{
+	int	i;
+	int	j;
+	int c;
+
+	i = 0;
+	j = 1;
+	while (arr[i])
+	{
+		while (arr[j])
+		{
+			if (arr[j] < arr[i])
+			{
+				c = arr[j];
+				arr[j] = arr[i];
+				arr[i] = c;
+			}
+			j++;
+		}
+		j = i + 2;
+		i++;
+	}
+}
+
+void	find_ms(int *arr, int *min,  int *med, int *max)
+{
+	int	i;
+
+	i = 0;
+	bubble_sort(arr);
+	while (arr[i])
+		i++;
+	*min = arr[0];
+	*max = arr[i - 1];
+	*med = arr[i/2];
+	// ft_printf("min %d, med %d, max %d \n", *min, *med, *max);
+}
+
 void find_extr(t_stack *a, int *min, int *max)
 {
 	*min = a->data;
@@ -29,14 +68,17 @@ void find_extr(t_stack *a, int *min, int *max)
 	}
 }
 
-void	fill_b(t_stacks *stacks)
+void	fill_b(t_stacks *stacks, int *arr)
 {
 	int	min;
 	int	max;
+	int	med;
 	// int	i;
 
 	// i = 0;
-	find_extr(stacks->a, &min, &max);
+	// find_extr(stacks->a, &min, &max);
+	find_ms(arr, &min, &med, &max);
+
 	// ft_printf("min: %d; max: %d \n", min, max);
 	// ft_printf("b address: %p\n", (*b));
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
@@ -198,7 +240,7 @@ void perform(t_stacks *stacks)
 
 void sort(t_stacks *stacks, int *arr)
 {
-	fill_b(stacks);
+	fill_b(stacks, arr);
 	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
 	while(stacks->b)
 	{
