@@ -16,7 +16,18 @@
 
 #include <stdio.h>
 
-void	sa(t_stack **a)
+void	sa(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	tmp = stacks->a;
+	stacks->a = (stacks->a)->next;
+	tmp->next = (stacks->a)->next;
+	(stacks->a)->next = tmp;
+	ft_printf("sa\n");
+}
+
+void	s(t_stack **a)
 {
 	t_stack	*tmp;
 
@@ -24,7 +35,7 @@ void	sa(t_stack **a)
 	*a = (*a)->next;
 	tmp->next = (*a)->next;
 	(*a)->next = tmp;
-	ft_printf("sa\n");
+	ft_printf("s\n");
 }
 
 void	pb(t_stacks *stacks)

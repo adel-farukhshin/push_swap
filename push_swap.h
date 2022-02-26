@@ -54,7 +54,8 @@ void	ascore_printf(t_stack *a);
 void	bscore_printf(t_stack *a);
 void	pos_printf(t_stack *a);
 
-void	sa(t_stack **a);
+void	sa(t_stacks *stacks);
+void	s(t_stack **a);
 void	p(t_stack **src, t_stack **dst);
 void	pb(t_stacks *stacks);
 void	pa(t_stacks *stacks);
