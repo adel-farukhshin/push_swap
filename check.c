@@ -29,7 +29,7 @@ static void	check_nb(int argc, char **argv, int *arr)
 	{
 		while (argv[argc - 1][j])
 		{
-			if (!ft_isdigit(argv[argc - 1][j]))
+			if (!ft_isdigit(argv[argc - 1][j]) && (argv[argc - 1][0] != '-'))
 			{
 				free(arr);
 				ft_printf("Error!\n");
