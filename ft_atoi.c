@@ -11,31 +11,34 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "ft_printf.h"
+#include <limits.h>
+#include <stdlib.h>
+
+#include <stdarg.h>
 
 static int	ft_isspace(char c);
+static int	is_negative(char c);
+static void	check_max(long int number, int neg, char c, va_list ap);
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str, ...)
 {
 	int				i;
-	long long int	number;
+	long int		number;
 	int				neg;
+	va_list			ap;
 
+	va_start(ap, str);
 	i = 0;
 	number = 0;
 	while (ft_isspace(str[i]))
 		i++;
-	if (str[i] == '-')
-		neg = -1;
-	else
-		neg = 1;
+	neg = is_negative(str[i]);
 	if (str[i] == '+' || str[i] == '-')
 		i++;
 	while (ft_isdigit(str[i]))
 	{
-		if ((neg == 1) && (number > 2147483647))
-			return (-1);
-		else if ((neg == -1) && (number > 2147483648))
-			return (0);
+		check_max(number, neg, str[i], ap);
 		number = number * 10 + (str[i] - 48);
 		i++;
 	}
@@ -48,4 +51,23 @@ static int	ft_isspace(char c)
 		|| c == '\f' || c == '\r' || c == '\n')
 		return (1);
 	return (0);
+}
+
+static int	is_negative(char c)
+{
+	if (c == '-')
+		return (-1);
+	else
+		return (1);
+}
+
+static void	check_max(long int number, int neg, char c, va_list ap)
+{
+	if ((neg == -1 && number == INT_MAX / 10 && c > 56)
+			|| (neg == 1 && number == INT_MAX / 10 && c > 55))
+	{
+		ft_printf("Error!\n");
+		free(va_arg(ap, int *));
+		exit (-1);
+	}
 }

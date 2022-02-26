@@ -36,7 +36,7 @@ static void	check_nb(int argc, char **argv, int *arr)
 			}
 			j++;
 		}
-		arr[argc - 2] = ft_atoi(argv[argc - 1]);
+		arr[argc - 2] = ft_atoi(argv[argc - 1], arr);
 		j = 0;
 		i++;
 		argc--;
