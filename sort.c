@@ -12,52 +12,51 @@
 
 
 #include "push_swap.h"
-
 #include "ft_printf.h"
 
 
-void	scorea(t_stack *a, int la, t_stack *cur)
-{
-	int	pos;
-	int	tpos;
+// void	scorea(t_stack *a, int la, t_stack *cur)
+// {
+// 	int	pos;
+// 	int	tpos;
 
-	pos = 1;
-	tpos = 0;
-	while (a->next)
-	{
-		if (cur->data > a->data && cur->data < (a->next)->data)
-			tpos = pos;
-		pos++;
-		a = a->next;
-	}
-	// ft_printf("tp %d, p %d\n", tpos, pos);
-	pos = tpos;
-	if (pos > la / 2)
-		cur->ascore = -(la - pos);
-	else
-		cur->ascore = pos;
-}
+// 	pos = 1;
+// 	tpos = 0;
+// 	while (a->next)
+// 	{
+// 		if (cur->data > a->data && cur->data < (a->next)->data)
+// 			tpos = pos;
+// 		pos++;
+// 		a = a->next;
+// 	}
+// 	// ft_printf("tp %d, p %d\n", tpos, pos);
+// 	pos = tpos;
+// 	if (pos > la / 2)
+// 		cur->ascore = -(la - pos);
+// 	else
+// 		cur->ascore = pos;
+// }
 
-void	score(t_stacks *stacks)
-{
-	int	pos;
-	t_stack	*tmp;
+// void	score(t_stacks *stacks)
+// {
+// 	int	pos;
+// 	t_stack	*tmp;
 
-	tmp = stacks->b;
-	pos = 0;
-	while (tmp)
-	{
-		if (pos > (stacks->lb) / 2)
-			tmp->bscore = -(stacks->lb - pos);
-		else
-			tmp->bscore = pos;
-		scorea(stacks->a, stacks->la, tmp);
-		// ft_printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
-		pos++;
-		tmp = tmp->next;
-	}
-	// ft_printf("\n");
-}
+// 	tmp = stacks->b;
+// 	pos = 0;
+// 	while (tmp)
+// 	{
+// 		if (pos > (stacks->lb) / 2)
+// 			tmp->bscore = -(stacks->lb - pos);
+// 		else
+// 			tmp->bscore = pos;
+// 		scorea(stacks->a, stacks->la, tmp);
+// 		// ft_printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
+// 		pos++;
+// 		tmp = tmp->next;
+// 	}
+// 	// ft_printf("\n");
+// }
 
 
 void sort(t_stacks *stacks, int *arr)

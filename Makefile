@@ -2,7 +2,7 @@
 NAME = push_swap
 
 SRCS =	ft_atoi.c ft_isdigit.c push_swap.c check.c stack.c list_functions.c \
-		s_printf.c check_sort.c sort.c cmds1.c fill_b.c perform.c
+		s_printf.c check_sort.c sort.c cmds1.c fill_b.c perform.c score.c
 
 OBJS = ${patsubst %.c,%.o,${SRCS}}
 
