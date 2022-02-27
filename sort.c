@@ -59,33 +59,6 @@ void	score(t_stacks *stacks)
 	// ft_printf("\n");
 }
 
-void	fill_pos(t_stacks *stacks)
-{
-	t_stack	*tmp;
-	int		pos;
-
-	pos = 0;
-	// ft_printf("fill_pos\n_________________\n");
-	// ft_printf("a : ");
-	tmp = stacks->a;
-	while (tmp)
-	{
-		tmp->ps = pos;
-		// ft_printf(" %d ", tmp->ps);
-		pos++;
-		tmp = tmp->next;
-	}
-	pos = 0;
-	// ft_printf("\nb : ");
-	tmp = stacks->b;
-	while (tmp)
-	{
-		tmp->ps = pos;
-		// ft_printf(" %d ", tmp->ps);
-		pos++;
-		tmp = tmp->next;
-	}
-}
 
 void sort(t_stacks *stacks, int *arr)
 {
@@ -104,7 +77,7 @@ void sort(t_stacks *stacks, int *arr)
 		// bscore_printf(stacks->b);
 		
 		// ft_printf("after score\n");
-		fill_pos(stacks);
+	
 		// pos_printf(stacks->a);
 		// pos_printf(stacks->b);
 

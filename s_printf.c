@@ -56,13 +56,3 @@ void	ascore_printf(t_stack *a)
 	ft_printf("\n");
 }
 
-void	pos_printf(t_stack *a)
-{
-	ft_printf("pos : ");
-	while (a)
-	{
-		ft_printf("%d ", a->ps);
-		a = a->next;
-	}
-	ft_printf("\n");
-}

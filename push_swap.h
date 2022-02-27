@@ -21,7 +21,6 @@ typedef struct s_stack {
 	int				data;
 	int				ascore;
 	int				bscore;
-	int				ps;
 	struct s_stack	*next;
 } t_stack;
 
@@ -55,7 +54,6 @@ void 	stack_printf(t_stack *a);
 void	stacks_printf(t_stack *a, t_stack *b);
 void	ascore_printf(t_stack *a);
 void	bscore_printf(t_stack *a);
-void	pos_printf(t_stack *a);
 
 void	sa(t_stacks *stacks);
 void	s(t_stack **a);
