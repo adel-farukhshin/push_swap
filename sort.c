@@ -54,19 +54,6 @@ void	find_ms(int *arr, int *min,  int *med, int *max)
 	// ft_printf("min %d, med %d, max %d \n", *min, *med, *max);
 }
 
-void find_extr(t_stack *a, int *min, int *max)
-{
-	*min = a->data;
-	*max = a->data;
-	while (a)
-	{
-		if (a->data > *max)
-			*max = a->data;
-		if (a->data < *min)
-			*min = a->data;
-		a = a->next;
-	}
-}
 
 #define F (stacks->a)->data
 #define S (stacks->a->next)->data
