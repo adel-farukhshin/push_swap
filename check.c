@@ -73,7 +73,7 @@ int	*check (int argc, char **argv)
 
 	if (argc == 1)
 		exit (-1);
-	arr = (int *) malloc((argc - 1) * sizeof(int));
+	arr = (int *) malloc((argc) * sizeof(int));
 	check_nb(argc, argv, arr);
 	check_dup(argc - 1, arr);
 	return (arr);
