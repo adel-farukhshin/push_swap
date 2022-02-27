@@ -14,12 +14,6 @@
 #include "push_swap.h"
 #include "ft_printf.h"
 
-void	sort_five(t_stacks *stacks, int *arr)
-{
-	// ft_printf("i %d %d", stacks->la, arr[0]);
-
-	
-}
 
 
 void sort(t_stacks *stacks, int *arr)
