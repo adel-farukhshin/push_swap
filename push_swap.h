@@ -42,6 +42,8 @@ int		is_final(t_stack *a);
 void sort(t_stacks *stacks, int *arr);
 void f_sort(t_stacks *stacks);
 
+void perform(t_stacks *stacks);
+
 t_stack  *lstnew(int data);
 void	lstadd_front(t_stack **lst, t_stack *new);
 int	lstsize(t_stack *list);
