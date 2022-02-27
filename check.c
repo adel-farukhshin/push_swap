@@ -41,6 +41,7 @@ static void	check_nb(int argc, char **argv, int *arr)
 		i++;
 		argc--;
 	}
+	arr[i] = 0;
 }
 
 static void	check_dup(int i, int *arr)
@@ -72,7 +73,7 @@ int	*check (int argc, char **argv)
 
 	if (argc == 1)
 		exit (-1);
-	arr = (int *) malloc(sizeof(int *) + (argc - 1) * sizeof(int));
+	arr = (int *) malloc((argc - 1) * sizeof(int));
 	check_nb(argc, argv, arr);
 	check_dup(argc - 1, arr);
 	return (arr);
