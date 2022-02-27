@@ -43,6 +43,7 @@ void f_sort(t_stacks *stacks);
 
 void sort_tripple(t_stacks *stacks);
 
+void	find_ms(int *arr, int *min,  int *med, int *max);
 void	fill_b(t_stacks *stacks, int *arr);
 void perform(t_stacks *stacks);
 void	score(t_stacks *stacks);
