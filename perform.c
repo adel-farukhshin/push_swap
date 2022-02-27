@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "ft_printf.h"
 
 static int	mod(int q)
 {
@@ -55,6 +56,7 @@ void perform(t_stacks *stacks)
 	while (cur->ascore > 0)
 	{
 		ra(stacks);
+		// ft_printf("perform \n");
 		cur->ascore--;
 	}
 	while (cur->ascore < 0)

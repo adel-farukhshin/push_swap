@@ -18,25 +18,33 @@
 
 void sort(t_stacks *stacks, int *arr)
 {
+	// int q = 0;
 	if (stacks->la == 5)
 		sort_five(stacks, arr);
 
 	else
 	{
 		fill_b(stacks, arr);
+		// stacks_printf(stacks->a, stacks->b);
 		// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
 		while(stacks->b)
 		{
+
+			
 			// ft_printf("b address after fill_b: %p\n", b);
 			// ft_printf("after fill b\n");
 			
-			// stacks_printf(stacks->a, stacks->b);
+			
 			
 			score(stacks);
+			// if (q < 2)
+			// {
+			// 		stacks_printf(stacks->a, stacks->b);
+			// 	ascore_printf(stacks->b);
+			// 	bscore_printf(stacks->b);
+			// }
 			
-			// ascore_printf(stacks->b);
-			// bscore_printf(stacks->b);
-			
+			// q++;
 			// ft_printf("after score\n");
 		
 			// pos_printf(stacks->a);

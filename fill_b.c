@@ -41,17 +41,22 @@ static void bubble_sort(int *arr)
 	}
 }
 
-void	find_ms(int *arr, int *min,  int *med, int *max)
+void	find_ms(int *arr, int *min,  int *med, int *max) // , t_stacks *stacks)
 {
 	int	i;
 
+	// ft_printf("isdup in find_ms beg %d\n", check_dup_l(stacks->a));
 	i = 0;
 	bubble_sort(arr);
+	// ft_printf("isdup in find_ms after bubble sort %d\n", check_dup_l(stacks->a));
+	
+	// ft_printf("in find ms\n");
 	while (arr[i])
 		i++;
 	*min = arr[0];
 	*max = arr[i - 1];
 	*med = arr[i/2];
+	// ft_printf("isdup in find_ms end %d\n", check_dup_l(stacks->a));
 	// ft_printf("min %d, med %d, max %d \n", *min, *med, *max);
 }
 
@@ -87,11 +92,27 @@ void	fill_b(t_stacks *stacks, int *arr)
 	int	min;
 	int	max;
 	int	med;
+
 	// int	i;
 
+	// int	q = 0;
+	// ft_printf("start of fill_b\n");
+	// while (arr[q])
+	// {
+	// 	ft_printf("%d ", arr[q]);
+	// 	q++;
+	// }
+
+	// ft_printf("isdup in fill_b %d\n", check_dup_l(stacks->a));
 	// i = 0;
 	// find_extr(stacks->a, &min, &max);
-	find_ms(arr, &min, &med, &max);
+	
+	// stacks_printf(stacks->a, stacks->b);
+
+	// ft_printf("_%d_\n", arr[0]);
+	
+	find_ms(arr, &min, &med, &max); //, stacks);
+	// ft_printf("isdup in fill_b %d\n", check_dup_l(stacks->a));
 
 	// ft_printf("min: %d; max: %d \n", min, max);
 	// ft_printf("b address: %p\n", (*b));
@@ -117,7 +138,15 @@ void	fill_b(t_stacks *stacks, int *arr)
 		
 	}
 	// stacks_printf(stacks->a, stacks->b);
-	
+	// ft_printf("min %d, med %d, max %d \n", min, med, max);
+
+	// int	q = 0;
+	// ft_printf("start of fill_b\n");
+	// while (arr[q])
+	// {
+	// 	ft_printf("%d ", arr[q]);
+	// 	q++;
+	// }
 	sort_tripple(stacks);
 	// stacks_printf(stacks->a, stacks->b);
 	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
