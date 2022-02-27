@@ -42,6 +42,7 @@ int		is_final(t_stack *a);
 void sort(t_stacks *stacks, int *arr);
 void f_sort(t_stacks *stacks);
 
+void	fill_b(t_stacks *stacks, int *arr);
 void perform(t_stacks *stacks);
 
 t_stack  *lstnew(int data);
