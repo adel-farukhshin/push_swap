@@ -15,13 +15,15 @@
 #include "push_swap.h"
 #include <stdlib.h>
 
+#include "ft_printf.h"
+
 t_stacks	*stacks_init(int argc, char **argv)
 {
 	t_stacks	*stacks;
 	int			i;
 	t_stack 	*tmp;
 	
-	stacks = malloc(sizeof(t_stacks *));
+	stacks = malloc(sizeof(t_stacks));
 	
 
 	i = 1;
@@ -29,12 +31,14 @@ t_stacks	*stacks_init(int argc, char **argv)
 	while (i < argc)
 	{
 		tmp = lstnew(ft_atoi(argv[i]));
+		// ft_printf("%d ", tmp->data);
 		lstadd_back(&(*stacks).a, tmp);
 		i++;
 	}
 	stacks->b = NULL;
 	stacks->la = i - 1;
 	stacks->lb = 0;
+	// stack_printf(stacks->a);
 	return (stacks);
 }
 
