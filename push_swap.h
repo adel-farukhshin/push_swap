@@ -41,6 +41,8 @@ int		is_final(t_stack *a);
 void sort(t_stacks *stacks, int *arr);
 void f_sort(t_stacks *stacks);
 
+void sort_tripple(t_stacks *stacks);
+
 void	fill_b(t_stacks *stacks, int *arr);
 void perform(t_stacks *stacks);
 void	score(t_stacks *stacks);

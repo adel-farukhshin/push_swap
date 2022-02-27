@@ -14,74 +14,43 @@
 #include "push_swap.h"
 #include "ft_printf.h"
 
+void	sort_five(t_stacks *stacks, int *arr)
+{
+	// ft_printf("i %d %d", stacks->la, arr[0]);
 
-// void	scorea(t_stack *a, int la, t_stack *cur)
-// {
-// 	int	pos;
-// 	int	tpos;
-
-// 	pos = 1;
-// 	tpos = 0;
-// 	while (a->next)
-// 	{
-// 		if (cur->data > a->data && cur->data < (a->next)->data)
-// 			tpos = pos;
-// 		pos++;
-// 		a = a->next;
-// 	}
-// 	// ft_printf("tp %d, p %d\n", tpos, pos);
-// 	pos = tpos;
-// 	if (pos > la / 2)
-// 		cur->ascore = -(la - pos);
-// 	else
-// 		cur->ascore = pos;
-// }
-
-// void	score(t_stacks *stacks)
-// {
-// 	int	pos;
-// 	t_stack	*tmp;
-
-// 	tmp = stacks->b;
-// 	pos = 0;
-// 	while (tmp)
-// 	{
-// 		if (pos > (stacks->lb) / 2)
-// 			tmp->bscore = -(stacks->lb - pos);
-// 		else
-// 			tmp->bscore = pos;
-// 		scorea(stacks->a, stacks->la, tmp);
-// 		// ft_printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
-// 		pos++;
-// 		tmp = tmp->next;
-// 	}
-// 	// ft_printf("\n");
-// }
+	
+}
 
 
 void sort(t_stacks *stacks, int *arr)
 {
-	fill_b(stacks, arr);
-	// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
-	while(stacks->b)
-	{
-		// ft_printf("b address after fill_b: %p\n", b);
-		// ft_printf("after fill b\n");
-		
-		// stacks_printf(stacks->a, stacks->b);
-		
-		score(stacks);
-		
-		// ascore_printf(stacks->b);
-		// bscore_printf(stacks->b);
-		
-		// ft_printf("after score\n");
-	
-		// pos_printf(stacks->a);
-		// pos_printf(stacks->b);
+	if (stacks->la == 5)
+		sort_five(stacks, arr);
 
-		perform(stacks);
-		pa(stacks);
+	else
+	{
+		fill_b(stacks, arr);
+		// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
+		while(stacks->b)
+		{
+			// ft_printf("b address after fill_b: %p\n", b);
+			// ft_printf("after fill b\n");
+			
+			// stacks_printf(stacks->a, stacks->b);
+			
+			score(stacks);
+			
+			// ascore_printf(stacks->b);
+			// bscore_printf(stacks->b);
+			
+			// ft_printf("after score\n");
+		
+			// pos_printf(stacks->a);
+			// pos_printf(stacks->b);
+
+			perform(stacks);
+			pa(stacks);
+		}
 	}
 	// pa(stacks);
 	
