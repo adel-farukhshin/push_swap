@@ -41,16 +41,14 @@ void sort(t_stacks *stacks, t_arr *array)
 	// stacks_printf(stacks->a, stacks->b);
 }
 
-void f_sort(t_stacks *stacks)
+static int find_min(t_stack *tmp)
 {
 	int	pos;
 	int	tpos;
 	int	min;
-	t_stack *tmp;
-
+	
 	pos = 0;
 	tpos = 0;
-	tmp = stacks->a;
 	min = tmp->data;
 	while (tmp)
 	{
@@ -62,7 +60,14 @@ void f_sort(t_stacks *stacks)
 		pos++;
 		tmp = tmp->next;
 	}
-	pos = tpos;
+	return (tpos);
+}
+
+void f_sort(t_stacks *stacks)
+{
+	int	pos;
+
+	pos = find_min(stacks->a);
 	// ft_printf("pos %d\n", pos);
 	if (pos > stacks->la / 2)
 		pos = -(stacks->la - pos);
