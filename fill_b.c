@@ -92,6 +92,8 @@ void	fill_b(t_stacks *stacks, t_arr *array)
 		if ((stacks->a)->data != min && (stacks->a)->data != max && (stacks->a)->data != med)
 		{
 			pb(stacks);
+			if ((stacks->b)->data > med)
+				rb(stacks);
 		}
 		else
 		{
