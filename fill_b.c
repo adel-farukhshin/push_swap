@@ -68,7 +68,7 @@ void	sort_tripple(t_stacks *stacks)
 	f = (stacks->a)->data;
 	s = (stacks->a->next)->data;
 	t = ((stacks->a->next)->next)->data;
-	if (f < s && s > t && f < s)
+	if (f < s && s > t && f < t)
 	{
 		sa(stacks);
 		ra(stacks);
