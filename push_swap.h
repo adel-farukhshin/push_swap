@@ -52,8 +52,6 @@ void		fill_b(t_stacks *stacks, t_arr *array);
 void		perform(t_stacks *stacks);
 void		score(t_stacks *stacks);
 
-int			check_dup_l(t_stack *l);
-
 t_stack		*lstnew(int data);
 void		lstadd_front(t_stack **lst, t_stack *new);
 int			lstsize(t_stack *list);
