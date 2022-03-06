@@ -12,9 +12,10 @@
 
 #include "push_swap.h"
 #include "ft_printf.h"
-#define F (stacks->a)->data
-#define S (stacks->a->next)->data
-#define T ((stacks->a->next)->next)->data
+
+// #define F (stacks->a)->data
+// #define S (stacks->a->next)->data
+// #define T ((stacks->a->next)->next)->data
 
 static void bubble_sort(t_arr *array)
 {
@@ -56,6 +57,13 @@ void	find_ms(t_arr *array, int *min,  int *med, int *max) // , t_stacks *stacks)
 
 void sort_tripple(t_stacks *stacks)
 {
+	int	F;
+	int	S;
+	int	T;
+
+	F = (stacks->a)->data;
+	S = (stacks->a->next)->data;
+	T = ((stacks->a->next)->next)->data;
 	// 1 3 2
 	if (F < S && S > T && F < T)
 	{
