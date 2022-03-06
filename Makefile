@@ -30,7 +30,6 @@ ${NAME} : ${OBJS}
 
 
 include ${wildcard ${D_FILES}}
-include ${wildcard ${D_FILESB}}
 
 clean :
 	rm -f ${OBJS} $(addprefix $(OBJSDIR),$(D_FILES))
