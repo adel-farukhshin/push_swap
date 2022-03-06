@@ -17,27 +17,39 @@
 
 // put error (in strerror): not integer, bigger than int, dupes
 // else: prompt back
-static void	check_nb(int argc, char **argv, int *arr)
-{
-	int	j;
-	int	i;
 
-	i = 0;
+// static void	check_char(char	*s, int	*arr);
+
+static void	check_char(char	*s, int	*arr)
+{
+
+	int	j;
+
 	j = 0;
-	while (argc - 1)
+	while (s[j])
 	{
-		while (argv[argc - 1][j])
+		if (!ft_isdigit(s[j]))
 		{
-			if (!ft_isdigit(argv[argc - 1][j]) && (argv[argc - 1][0] != '-'))
+			if (!(j == 0 && (s[j] == '-' || s[j] == '+')))
 			{
 				free(arr);
 				ft_printf("Error!\n");
 				exit (-1);
 			}
-			j++;
 		}
+		j++;
+	}
+}
+
+static void	check_nb(int argc, char **argv, int *arr)
+{
+	int	i;
+
+	i = 0;
+	while (argc - 1)
+	{
+		check_char(argv[argc - 1], arr);
 		arr[argc - 2] = ft_atoi(argv[argc - 1], arr);
-		j = 0;
 		i++;
 		argc--;
 	}
