@@ -14,11 +14,8 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
-
-
 int	main (int argc, char **argv)
 {
-	int			i;
 	t_stacks	*stacks;
 	t_arr		*array;
 	int			*arr;
@@ -27,22 +24,17 @@ int	main (int argc, char **argv)
 	array = malloc(sizeof(t_arr));
 	array->arr = arr;
 	array->len = argc - 1;
-	// ft_printf("check out %d\n", i);
 	stacks = stacks_init(argc, argv);
 	// ft_printf("in main\n");
 	// stack_printf(stacks->a);
 	// ft_printf("isdup in main %d\n", check_dup_l(stacks->a));
-	i = is_sorted(stacks->a);
 	// ft_printf("is sorted: %d\n", i);
-	if (!i)
-	{
+	if (!is_sorted(stacks->a))
 		sort(stacks, array);
-	}
 	// ft_printf("after sort\n");
 	// stacks_printf(stacks->a, stacks->b);
-	i = is_final(stacks->a);
 	// ft_printf("is final: %d\n", i);
-	if (!i)
+	if (!is_final(stacks->a))
 		f_sort(stacks);
 	// stacks_printf(stacks->a, stacks->b);
 	free(array->arr);
