@@ -10,29 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "push_swap.h"
 #include "ft_printf.h"
-
-
-#include <stdio.h>
-
 #include <stdlib.h>
 
 
 
 int	main (int argc, char **argv)
 {
-	int		i;
+	int			i;
 	t_stacks	*stacks;
 	t_arr		*array;
-	// int		*arr;
-	// t_stack	*a;
-	// t_stack	*b;
+	int			*arr;
 
+	arr = check(argc, argv);
 	array = malloc(sizeof(t_arr));
-	array->arr = check(argc, argv);
+	array->arr = arr;
 	array->len = argc - 1;
 	// ft_printf("check out %d\n", i);
 	stacks = stacks_init(argc, argv);
@@ -53,5 +46,6 @@ int	main (int argc, char **argv)
 		f_sort(stacks);
 	// stacks_printf(stacks->a, stacks->b);
 	free(array->arr);
+	free(array);
 	free_stacks(stacks);
 }
