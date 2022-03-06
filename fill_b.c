@@ -46,22 +46,16 @@ void	find_ms(t_arr *array, int *min,  int *med, int *max) // , t_stacks *stacks)
 {
 	int	i;
 
-	// ft_printf("isdup in find_ms beg %d\n", check_dup_l(stacks->a));
 	i = 0;
 	bubble_sort(array);
-	// ft_printf("isdup in find_ms after bubble sort %d\n", check_dup_l(stacks->a));
-	
-	// ft_printf("in find ms\n");
 	*min = array->arr[0];
 	*max = array->arr[array->len - 1];
 	*med = array->arr[array->len/2];
-	// ft_printf("isdup in find_ms end %d\n", check_dup_l(stacks->a));
 	// ft_printf("min %d, med %d, max %d \n", *min, *med, *max);
 }
 
 void sort_tripple(t_stacks *stacks)
 {
-
 	// 1 3 2
 	if (F < S && S > T && F < T)
 	{
@@ -83,7 +77,6 @@ void sort_tripple(t_stacks *stacks)
 		sa(stacks);
 		rra(stacks);
 	}
-
 }
 
 void	fill_b(t_stacks *stacks, t_arr *array)
@@ -92,63 +85,20 @@ void	fill_b(t_stacks *stacks, t_arr *array)
 	int	max;
 	int	med;
 
-	// int	i;
-
-	// int	q = 0;
-	// ft_printf("start of fill_b\n");
-	// while (arr[q])
-	// {
-	// 	ft_printf("%d ", arr[q]);
-	// 	q++;
-	// }
-
-	// ft_printf("isdup in fill_b %d\n", check_dup_l(stacks->a));
-	// i = 0;
-	// find_extr(stacks->a, &min, &max);
-	
 	// stacks_printf(stacks->a, stacks->b);
-
-	// ft_printf("_%d_\n", arr[0]);
-	
-	find_ms(array, &min, &med, &max); //, stacks);
-	// ft_printf("isdup in fill_b %d\n", check_dup_l(stacks->a));
-
-	// ft_printf("min: %d; max: %d \n", min, max);
-	// ft_printf("b address: %p\n", (*b));
-	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
-	
-	// stacks_printf(stacks->a, stacks->b);
-
+	find_ms(array, &min, &med, &max);
 	while (stacks->la != 3)
 	{
 		if ((stacks->a)->data != min && (stacks->a)->data != max && (stacks->a)->data != med)
 		{
 			pb(stacks);
-			// ft_printf("pb\n");
 		}
-		else //if (i + 1 < stacks->la)
+		else
 		{
-			// change to ra
 			ra(stacks);
-			// ft_printf("ra\n");
 		}
-		// stacks_printf(stacks->a, stacks->b);
-		// i++;
-		
 	}
 	// stacks_printf(stacks->a, stacks->b);
-	// ft_printf("min %d, med %d, max %d \n", min, med, max);
-
-	// int	q = 0;
-	// ft_printf("start of fill_b\n");
-	// while (arr[q])
-	// {
-	// 	ft_printf("%d ", arr[q]);
-	// 	q++;
-	// }
 	sort_tripple(stacks);
 	// stacks_printf(stacks->a, stacks->b);
-	// ft_printf("la: %d, lb: %d\n", stacks->la, stacks->lb);
-	// ft_printf("b address after while: %p\n", (*b));
-
 }

@@ -27,13 +27,9 @@ int	main (int argc, char **argv)
 	stacks = stacks_init(argc, argv);
 	// ft_printf("in main\n");
 	// stack_printf(stacks->a);
-	// ft_printf("isdup in main %d\n", check_dup_l(stacks->a));
-	// ft_printf("is sorted: %d\n", i);
 	if (!is_sorted(stacks->a))
 		sort(stacks, array);
-	// ft_printf("after sort\n");
 	// stacks_printf(stacks->a, stacks->b);
-	// ft_printf("is final: %d\n", i);
 	if (!is_final(stacks->a))
 		f_sort(stacks);
 	// stacks_printf(stacks->a, stacks->b);

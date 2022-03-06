@@ -27,7 +27,6 @@ static void	scorea(t_stack *a, int la, t_stack *cur)
 		pos++;
 		a = a->next;
 	}
-	// ft_printf("tp %d, p %d\n", tpos, pos);
 	pos = tpos;
 	if (pos > la / 2)
 		cur->ascore = -(la - pos);

@@ -56,20 +56,11 @@ void perform(t_stacks *stacks)
 	while (cur->ascore > 0)
 	{
 		ra(stacks);
-		// ft_printf("perform \n");
 		cur->ascore--;
 	}
 	while (cur->ascore < 0)
 	{
 		rra(stacks);
 		cur->ascore++;
-	}
-	// rb(stacks);
-	// ra(stacks);
-	// stacks_printf(stacks->a, stacks->b);
-	// rra(stacks);
-	// rrb(stacks);
-	// stacks_printf(stacks->a, stacks->b);
-	// printf("%d ", cur->data);
-	
+	}	
 }

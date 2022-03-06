@@ -13,7 +13,6 @@
 #include "push_swap.h"
 #include "ft_printf.h"
 
-// int	ismaxinstack(t_stacks *stacks, int max)
 static int	ismaxinstack(t_stacks *stacks, int val)
 {
 	t_stack	*tmp;
@@ -34,7 +33,6 @@ void	sort_five(t_stacks *stacks, t_arr *array)
 	int	med;
 	int	max;
 
-	// ft_printf("i %d %d \n", stacks->la, arr[0]);
 	// stacks_printf(stacks->a, stacks->b);
 	find_ms(array, &min, &med, &max);
 	while (stacks->la != 3)
