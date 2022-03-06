@@ -26,11 +26,13 @@ int	main (int argc, char **argv)
 {
 	int		i;
 	t_stacks	*stacks;
-	int		*arr;
+	t_arr	array;
+	// int		*arr;
 	// t_stack	*a;
 	// t_stack	*b;
 
-	arr = check(argc, argv);
+	array.arr = check(argc, argv);
+	array.len = argc - 1;
 	// ft_printf("check out %d\n", i);
 	stacks = stacks_init(argc, argv);
 	// ft_printf("in main\n");
@@ -40,7 +42,7 @@ int	main (int argc, char **argv)
 	// ft_printf("is sorted: %d\n", i);
 	if (!i)
 	{
-		sort(stacks, arr);
+		sort(stacks, array);
 	}
 	// ft_printf("after sort\n");
 	// stacks_printf(stacks->a, stacks->b);
@@ -49,6 +51,6 @@ int	main (int argc, char **argv)
 	if (!i)
 		f_sort(stacks);
 	// stacks_printf(stacks->a, stacks->b);
-	free(arr);
+	free(array.arr);
 	free_stacks(stacks);
 }

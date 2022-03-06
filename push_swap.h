@@ -33,12 +33,19 @@ typedef	struct s_stacks
 	
 } t_stacks;
 
+typedef	struct s_arr
+{
+	int *arr;
+	int	len;
+} t_arr;
+
+
 t_stacks	*stacks_init(int argc, char **argv);
 void	free_stacks(t_stacks *stacks);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 
-void sort(t_stacks *stacks, int *arr);
+void sort(t_stacks *stacks, t_arr array);
 void f_sort(t_stacks *stacks);
 
 void sort_tripple(t_stacks *stacks);
