@@ -57,30 +57,30 @@ void	find_ms(t_arr *array, int *min,  int *med, int *max) // , t_stacks *stacks)
 
 void sort_tripple(t_stacks *stacks)
 {
-	int	F;
-	int	S;
-	int	T;
+	int	f;
+	int	s;
+	int	t;
 
-	F = (stacks->a)->data;
-	S = (stacks->a->next)->data;
-	T = ((stacks->a->next)->next)->data;
+	f = (stacks->a)->data;
+	s = (stacks->a->next)->data;
+	t = ((stacks->a->next)->next)->data;
 	// 1 3 2
-	if (F < S && S > T && F < T)
+	if (f < s && s > t && f < s)
 	{
 		sa(stacks);
 		ra(stacks);
 	}
 	// 2 3 1
-	else if (F < S && S > T && F > T)
+	else if (f < s && s > t && f > t)
 		rra(stacks);
 	// 2 1 3
-	else if (F > S && S < T && F < T)
+	else if (f > s && s < t && f < t)
 		sa(stacks);
 	// 3 1 2
-	else if (F > S && S < T && F > T)
+	else if (f > s && s < t && f > t)
 		ra(stacks);
 	// 3 2 1
-	else if (F > S && S > T && F > T)
+	else if (f > s && s > t && f > t)
 	{
 		sa(stacks);
 		rra(stacks);
