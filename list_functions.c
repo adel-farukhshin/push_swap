@@ -10,19 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include <stdlib.h>
 #include "push_swap.h"
 
-t_stack  *lstnew(int data)
+t_stack	*lstnew(int data)
 {
-    t_stack  *a;
+	t_stack	*a;
 
-    a = malloc(sizeof(t_stack));
-    a->data = data;
+	a = malloc(sizeof(t_stack));
+	a->data = data;
 	a->next = NULL;
-    return (a);
+	return (a);
 }
 
 void	lstadd_front(t_stack **lst, t_stack *new)
