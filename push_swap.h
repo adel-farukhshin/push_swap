@@ -45,7 +45,7 @@ void	free_stacks(t_stacks *stacks);
 int		is_sorted(t_stack *a);
 int		is_final(t_stack *a);
 
-void sort(t_stacks *stacks, t_arr array);
+void sort(t_stacks *stacks, t_arr *array);
 void f_sort(t_stacks *stacks);
 
 void sort_tripple(t_stacks *stacks);
