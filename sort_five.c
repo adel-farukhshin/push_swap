@@ -28,7 +28,7 @@ static int	ismaxinstack(t_stacks *stacks, int val)
 	return (1);
 }
 
-void	sort_five(t_stacks *stacks, int *arr)
+void	sort_five(t_stacks *stacks, t_arr *array)
 {
 	int	min;
 	int	med;
@@ -36,7 +36,7 @@ void	sort_five(t_stacks *stacks, int *arr)
 
 	// ft_printf("i %d %d \n", stacks->la, arr[0]);
 	// stacks_printf(stacks->a, stacks->b);
-	find_ms(arr, &min, &med, &max);
+	find_ms(array, &min, &med, &max);
 	while (stacks->la != 3)
 		pb(stacks);
 	sort_tripple(stacks);

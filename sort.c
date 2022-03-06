@@ -20,11 +20,11 @@ void sort(t_stacks *stacks, t_arr *array)
 {
 	// int q = 0;
 	if (stacks->la == 5)
-		sort_five(stacks, array->arr);
+		sort_five(stacks, array);
 
 	else
 	{
-		fill_b(stacks, array->arr);
+		fill_b(stacks, array);
 		// stacks_printf(stacks->a, stacks->b);
 		// fill_b(&(*stacks).a, &(*stacks).b, stacks->la);
 		while(stacks->b)
