@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 #include "ft_printf.h"
 #include <stdio.h>
@@ -56,7 +55,6 @@ void	pa(t_stacks *stacks)
 	}
 }
 
-
 void	ra(t_stacks *stacks)
 {
 	t_stack	*tmp;
@@ -77,36 +75,4 @@ void	rb(t_stacks *stacks)
 	tmp->next = NULL;
 	lstadd_back(&(*stacks).b, tmp);
 	ft_printf("rb\n");
-}
-
-void	rra(t_stacks *stacks)
-{
-	t_stack	*tmp;
-	t_stack	*prev;
-
-	tmp = stacks->a;
-	while (tmp->next)
-	{
-		prev = tmp;
-		tmp = tmp->next;
-	}
-	prev->next = NULL;
-	lstadd_front(&(*stacks).a, tmp);
-	ft_printf("rra\n");
-}
-
-void	rrb(t_stacks *stacks)
-{
-	t_stack	*tmp;
-	t_stack	*prev;
-
-	tmp = stacks->b;
-	while (tmp->next)
-	{
-		prev = tmp;
-		tmp = tmp->next;
-	}
-	prev->next = NULL;
-	lstadd_front(&(*stacks).b, tmp);
-	ft_printf("rrb\n");
 }
