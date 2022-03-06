@@ -13,9 +13,7 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-	int	ft_isdigit(int c);
-	int	ft_atoi(const char *str, ...);
-	int	*check (int argc, char **argv);
+	
 
 typedef struct s_stack {
 	int				data;
@@ -39,45 +37,44 @@ typedef	struct s_arr
 	int	len;
 } t_arr;
 
+int			ft_isdigit(int c);
+int			ft_atoi(const char *str, ...);
+int			*check (int argc, char **argv);
 
 t_stacks	*stacks_init(int argc, char **argv);
-void	free_stacks(t_stacks *stacks);
-int		is_sorted(t_stack *a);
-int		is_final(t_stack *a);
+void		free_stacks(t_stacks *stacks);
+int			is_sorted(t_stack *a);
+int			is_final(t_stack *a);
 
-void sort(t_stacks *stacks, t_arr *array);
-void f_sort(t_stacks *stacks);
+void 		sort(t_stacks *stacks, t_arr *array);
+void 		f_sort(t_stacks *stacks);
 
-void sort_tripple(t_stacks *stacks);
-void	sort_five(t_stacks *stacks, t_arr *array);
+void 		sort_tripple(t_stacks *stacks);
+void		sort_five(t_stacks *stacks, t_arr *array);
 
-void	find_ms(t_arr *array, int *min,  int *med, int *max);
-void	fill_b(t_stacks *stacks, t_arr *array);
-void perform(t_stacks *stacks);
-void	score(t_stacks *stacks);
+void		find_ms(t_arr *array, int *min,  int *med, int *max);
+void		fill_b(t_stacks *stacks, t_arr *array);
+void		perform(t_stacks *stacks);
+void		score(t_stacks *stacks);
 
-int		check_dup_l(t_stack *l);
+int			check_dup_l(t_stack *l);
 
-t_stack  *lstnew(int data);
-void	lstadd_front(t_stack **lst, t_stack *new);
-int	lstsize(t_stack *list);
-t_stack	*lstlast(t_stack *list);
-void	lstadd_back(t_stack **lst, t_stack *new);
+t_stack		*lstnew(int data);
+void		lstadd_front(t_stack **lst, t_stack *new);
+int			lstsize(t_stack *list);
+t_stack		*lstlast(t_stack *list);
+void		lstadd_back(t_stack **lst, t_stack *new);
 
-void 	stack_printf(t_stack *a);
-void	stacks_printf(t_stack *a, t_stack *b);
-void	ascore_printf(t_stack *a);
-void	bscore_printf(t_stack *a);
+void		stack_printf(t_stack *a);
+void		stacks_printf(t_stack *a, t_stack *b);
+void		ascore_printf(t_stack *a);
+void		bscore_printf(t_stack *a);
 
-void	sa(t_stacks *stacks);
-void	s(t_stack **a);
-void	p(t_stack **src, t_stack **dst);
-void	pb(t_stacks *stacks);
-void	pa(t_stacks *stacks);
-void	r(t_stack **src);
-void	rb(t_stacks *stacks);
-void	ra(t_stacks *stacks);
-void	rra(t_stacks *stacks);
-void	rrb(t_stacks *stacks);
-void	rr(t_stack **src);
+void		sa(t_stacks *stacks);
+void		pb(t_stacks *stacks);
+void		pa(t_stacks *stacks);
+void		rb(t_stacks *stacks);
+void		ra(t_stacks *stacks);
+void		rra(t_stacks *stacks);
+void		rrb(t_stacks *stacks);
 #endif
