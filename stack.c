@@ -10,35 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "push_swap.h"
 #include <stdlib.h>
-
 #include "ft_printf.h"
 
 t_stacks	*stacks_init(int argc, char **argv)
 {
 	t_stacks	*stacks;
 	int			i;
-	t_stack 	*tmp;
-	
-	stacks = malloc(sizeof(t_stacks));
-	
+	t_stack		*tmp;
 
-	i = 1;
+	stacks = malloc(sizeof(t_stacks));
+		i = 1;
 	stacks->a = NULL;
 	while (i < argc)
 	{
 		tmp = lstnew(ft_atoi(argv[i]));
-		// ft_printf("%d ", tmp->data);
 		lstadd_back(&(*stacks).a, tmp);
 		i++;
 	}
 	stacks->b = NULL;
 	stacks->la = i - 1;
 	stacks->lb = 0;
-	// stack_printf(stacks->a);
 	return (stacks);
 }
 
@@ -46,13 +39,13 @@ void	free_stacks(t_stacks *stacks)
 {
 	t_stack	*tmp;
 
-	while(stacks->a)
+	while (stacks->a)
 	{
 		tmp = stacks->a;
 		stacks->a = (stacks->a)->next;
 		free(tmp);
 	}
-	while(stacks->b)
+	while (stacks->b)
 	{
 		tmp = stacks->b;
 		stacks->b = (stacks->b)->next;

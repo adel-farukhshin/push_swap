@@ -21,25 +21,24 @@ static int	mod(int q)
 		return (q);
 }
 
-
-static t_stack *sum(t_stack *b)
+static t_stack	*sum(t_stack *b)
 {
 	t_stack	*tmp;
 
 	tmp = b;
-	while(b)
+	while (b)
 	{
-		if ((mod(tmp->ascore) + mod(tmp->bscore)) >
-			(mod(b->ascore) + mod(b->bscore)))
+		if ((mod(tmp->ascore) + mod(tmp->bscore))
+			> (mod(b->ascore) + mod(b->bscore)))
 			tmp = b;
 		b = b->next;
 	}
 	return (tmp);
 }
 
-void perform(t_stacks *stacks)
+void	perform(t_stacks *stacks)
 {
-	t_stack *cur;
+	t_stack	*cur;
 
 	cur = sum(stacks->b);
 	while (cur->bscore > 0)
@@ -52,7 +51,6 @@ void perform(t_stacks *stacks)
 		rrb(stacks);
 		cur->bscore++;
 	}
-
 	while (cur->ascore > 0)
 	{
 		ra(stacks);

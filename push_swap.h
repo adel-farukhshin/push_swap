@@ -10,49 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-	
 
 typedef struct s_stack {
 	int				data;
 	int				ascore;
 	int				bscore;
 	struct s_stack	*next;
-} t_stack;
+}	t_stack;
 
-typedef	struct s_stacks
-{
-	struct s_stack *a;
-	struct s_stack *b;
+typedef struct s_stacks {
+	struct s_stack	*a;
+	struct s_stack	*b;
 	int				la;
 	int				lb;
-	
-} t_stacks;
+}	t_stacks;
 
-typedef	struct s_arr
-{
-	int *arr;
+typedef struct s_arr {
+	int	*arr;
 	int	len;
-} t_arr;
+}	t_arr;
 
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str, ...);
-int			*check (int argc, char **argv);
+int			*check(int argc, char **argv);
 
 t_stacks	*stacks_init(int argc, char **argv);
 void		free_stacks(t_stacks *stacks);
 int			is_sorted(t_stack *a);
 int			is_final(t_stack *a);
 
-void 		sort(t_stacks *stacks, t_arr *array);
-void 		f_sort(t_stacks *stacks);
+void		sort(t_stacks *stacks, t_arr *array);
+void		f_sort(t_stacks *stacks);
 
-void 		sort_tripple(t_stacks *stacks);
+void		sort_tripple(t_stacks *stacks);
 void		sort_five(t_stacks *stacks, t_arr *array);
 
-void		find_ms(t_arr *array, int *min,  int *med, int *max);
+void		find_ms(t_arr *array, int *min, int *med, int *max);
 void		fill_b(t_stacks *stacks, t_arr *array);
 void		perform(t_stacks *stacks);
 void		score(t_stacks *stacks);

@@ -10,19 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <stdlib.h>
 #include "ft_printf.h"
 #include "push_swap.h"
 
-// put error (in strerror): not integer, bigger than int, dupes
-// else: prompt back
-
-// static void	check_char(char	*s, int	*arr);
-
 static void	check_char(char	*s, int	*arr)
 {
-
 	int	j;
 
 	j = 0;
@@ -65,7 +58,6 @@ static void	check_dup(int i, int *arr)
 	{
 		while (j < i - 1)
 		{
-			// ft_printf ("j %d; i - 1 %d\n", arr[j], arr[i - 1]);
 			if (arr[j] == arr[i - 1])
 			{
 				free(arr);
@@ -79,7 +71,7 @@ static void	check_dup(int i, int *arr)
 	}
 }
 
-int	*check (int argc, char **argv)
+int	*check(int argc, char **argv)
 {
 	int	*arr;
 

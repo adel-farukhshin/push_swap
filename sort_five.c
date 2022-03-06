@@ -33,22 +33,19 @@ void	sort_five(t_stacks *stacks, t_arr *array)
 	int	med;
 	int	max;
 
-	// stacks_printf(stacks->a, stacks->b);
 	find_ms(array, &min, &med, &max);
 	while (stacks->la != 3)
 		pb(stacks);
 	sort_tripple(stacks);
-	// stacks_printf(stacks->a, stacks->b);
 	if (!is_final(stacks->b))
 		rb(stacks);
-	// stacks_printf(stacks->a, stacks->b);
 	while (stacks->b)
 	{
 		if ((stacks->b)->data < (stacks->a)->data)
 			pa(stacks);
-		else if (ismaxinstack(stacks, (stacks->b)->data) && (stacks->a)->data == min)
+		else if (ismaxinstack(stacks,
+				(stacks->b)->data) && (stacks->a)->data == min)
 			pa(stacks);
 		ra(stacks);
-		// stacks_printf(stacks->a, stacks->b);
 	}
 }

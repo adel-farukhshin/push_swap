@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
 #include "push_swap.h"
 
@@ -55,4 +54,3 @@ void	ascore_printf(t_stack *a)
 	}
 	ft_printf("\n");
 }
-

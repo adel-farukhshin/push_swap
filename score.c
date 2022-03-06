@@ -36,7 +36,7 @@ static void	scorea(t_stack *a, int la, t_stack *cur)
 
 void	score(t_stacks *stacks)
 {
-	int	pos;
+	int		pos;
 	t_stack	*tmp;
 
 	tmp = stacks->b;
@@ -48,9 +48,7 @@ void	score(t_stacks *stacks)
 		else
 			tmp->bscore = pos;
 		scorea(stacks->a, stacks->la, tmp);
-		// ft_printf("_ %d %d _ ", tmp->ascore, tmp->bscore);
 		pos++;
 		tmp = tmp->next;
 	}
-	// ft_printf("\n");
 }

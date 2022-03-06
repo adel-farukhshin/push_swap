@@ -14,7 +14,7 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
-int	main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
 	t_arr		*array;
@@ -25,14 +25,10 @@ int	main (int argc, char **argv)
 	array->arr = arr;
 	array->len = argc - 1;
 	stacks = stacks_init(argc, argv);
-	// ft_printf("in main\n");
-	// stack_printf(stacks->a);
 	if (!is_sorted(stacks->a))
 		sort(stacks, array);
-	// stacks_printf(stacks->a, stacks->b);
 	if (!is_final(stacks->a))
 		f_sort(stacks);
-	// stacks_printf(stacks->a, stacks->b);
 	free(array->arr);
 	free(array);
 	free_stacks(stacks);
