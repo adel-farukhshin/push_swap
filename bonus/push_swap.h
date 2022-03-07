@@ -38,6 +38,8 @@ void		check(int argc, char **argv);
 
 t_stacks	*stacks_init(int argc, char **argv);
 void		free_stacks(t_stacks *stacks);
+char	*ft_strstr(const char *haystack, const char *needle);
+
 int			is_sorted(t_stack *a);
 int			is_final(t_stack *a);
 
