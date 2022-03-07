@@ -63,8 +63,8 @@ static int	is_negative(char c)
 
 static void	check_max(long int number, int neg, char c, va_list ap)
 {
-	if ((neg == -1 && number == INT_MAX / 10 && c > 56)
-		|| (neg == 1 && number == INT_MAX / 10 && c > 55))
+	if ((neg == -1 && (number * neg * 10) - c + 48 < INT_MIN)
+		|| (neg == 1 && (number * 10) + c - 48 > INT_MAX))
 	{
 		ft_printf("Error!\n");
 		free(va_arg(ap, int *));
