@@ -14,7 +14,7 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-char	*ft_strstr(const char *haystack, const char *needle) //, size_t len)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	char	*h;
 	size_t	nlen;
@@ -25,10 +25,10 @@ char	*ft_strstr(const char *haystack, const char *needle) //, size_t len)
 	nlen = (size_t) ft_strlen(needle);
 	if (!nlen)
 		return (h);
-	if (ft_strlen(haystack) < nlen) // || len < nlen)
+	if (ft_strlen(haystack) < nlen)
 		return (NULL);
 	i = 0;
-	while (h[i])// && i <= nlen)//len - nlen)
+	while (h[i])
 	{
 		j = 0;
 		while (needle[j] && needle[j] == h[i + j])

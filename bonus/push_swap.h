@@ -15,16 +15,15 @@
 
 typedef struct s_stack {
 	int				data;
-	int				ascore;
-	int				bscore;
+	// int				ascore;
+	// int				bscore;
 	struct s_stack	*next;
 }	t_stack;
 
 typedef struct s_stacks {
 	struct s_stack	*a;
 	struct s_stack	*b;
-	// int				la;
-	// int				lb;
+
 }	t_stacks;
 
 typedef struct s_arr {
@@ -43,19 +42,19 @@ void		free_stacks(t_stacks *stacks);
 void		parse(t_stacks *stacks);
 char		*ft_strstr(const char *haystack, const char *needle);
 
-int			is_sorted(t_stack *a);
+// int			is_sorted(t_stack *a);
 int			is_final(t_stack *a);
 
-void		sort(t_stacks *stacks, t_arr *array);
-void		f_sort(t_stacks *stacks);
+// void		sort(t_stacks *stacks, t_arr *array);
+// void		f_sort(t_stacks *stacks);
 
-void		sort_tripple(t_stacks *stacks);
-void		sort_five(t_stacks *stacks, t_arr *array);
+// void		sort_tripple(t_stacks *stacks);
+// void		sort_five(t_stacks *stacks, t_arr *array);
 
-void		find_ms(t_arr *array, int *min, int *med, int *max);
-void		fill_b(t_stacks *stacks, t_arr *array);
-void		perform(t_stacks *stacks);
-void		score(t_stacks *stacks);
+// void		find_ms(t_arr *array, int *min, int *med, int *max);
+// void		fill_b(t_stacks *stacks, t_arr *array);
+// void		perform(t_stacks *stacks);
+// void		score(t_stacks *stacks);
 
 t_stack		*lstnew(int data);
 void		lstadd_front(t_stack **lst, t_stack *new);
@@ -65,8 +64,8 @@ void		lstadd_back(t_stack **lst, t_stack *new);
 
 void		stack_printf(t_stack *a);
 void		stacks_printf(t_stack *a, t_stack *b);
-void		ascore_printf(t_stack *a);
-void		bscore_printf(t_stack *a);
+// void		ascore_printf(t_stack *a);
+// void		bscore_printf(t_stack *a);
 
 void		sa(t_stacks *stacks);
 void		sb(t_stacks *stacks);
