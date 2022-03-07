@@ -16,7 +16,6 @@
 #include "get_next_line.h"
 #include <stdlib.h>
 
-
 int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
@@ -28,6 +27,5 @@ int	main(int argc, char **argv)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");
-	// stacks_printf(stacks->a, stacks->b);
 	free_stacks(stacks);
 }

@@ -63,9 +63,7 @@ void	parse(t_stacks *stacks)
 		}
 		cmd = p - model;
 		choose_cmd(stacks, cmd);
-		// stacks_printf(stacks->a, stacks->b);
 		free (str);
 		str = get_next_line(0);
 	}
-	// stacks_printf(stacks->a, stacks->b);
 }

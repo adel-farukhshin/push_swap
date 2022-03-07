@@ -32,25 +32,3 @@ void	stack_printf(t_stack *a)
 		a = a->next;
 	}
 }
-
-void	bscore_printf(t_stack *a)
-{
-	ft_printf("b score: ");
-	while (a)
-	{
-		ft_printf("%d ", a->bscore);
-		a = a->next;
-	}
-	ft_printf("\n");
-}
-
-void	ascore_printf(t_stack *a)
-{
-	ft_printf("a score: ");
-	while (a)
-	{
-		ft_printf("%d ", a->ascore);
-		a = a->next;
-	}
-	ft_printf("\n");
-}
