@@ -19,7 +19,7 @@
 int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
-	
+
 	check(argc, argv);
 	stacks = stacks_init(argc, argv);
 	parse(stacks);

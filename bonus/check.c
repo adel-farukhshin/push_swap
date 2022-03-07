@@ -71,7 +71,7 @@ static void	check_dup(int i, int *arr)
 	}
 }
 
-void check(int argc, char **argv)
+void	check(int argc, char **argv)
 {
 	int	*arr;
 

@@ -15,8 +15,6 @@
 
 typedef struct s_stack {
 	int				data;
-	// int				ascore;
-	// int				bscore;
 	struct s_stack	*next;
 }	t_stack;
 
