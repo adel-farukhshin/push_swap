@@ -49,9 +49,10 @@ void	parse(t_stacks *stacks)
 {
 	char		*str;
 	char		*p;
-	char		*model = "sa\nsb\npa\npb\nra\nrb\nrr\nrra\nrrb\nrrr\n";
+	char		*model;
 	int			cmd;
 
+	model = "sa\nsb\npa\npb\nra\nrb\nrr\nrra\nrrb\nrrr\n";
 	str = get_next_line(0);
 	while (str)
 	{
