@@ -34,7 +34,7 @@ typedef struct s_arr {
 
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str, ...);
-int			*check(int argc, char **argv);
+void		check(int argc, char **argv);
 
 t_stacks	*stacks_init(int argc, char **argv);
 void		free_stacks(t_stacks *stacks);

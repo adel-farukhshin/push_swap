@@ -5,7 +5,7 @@ BONUSNAME = my_checker
 SRCS =	ft_atoi.c ft_isdigit.c push_swap.c check.c stack.c list_functions.c \
 		s_printf.c check_sort.c sort.c cmds1.c cmds2.c fill_b.c perform.c score.c sort_five.c \
 
-SRCSB = checker.c
+SRCSB = checker.c check.c ft_atoi.c ft_isdigit.c
 
 OBJS = $(addprefix $(OBJSDIR),$(SRCS:.c=.o))
 OBJSB = $(addprefix $(BONUSDIR),$(SRCSB:.c=.o))

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsarai <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 11:00:44 by bsarai            #+#    #+#             */
-/*   Updated: 2022/03/07 11:00:45 by bsarai           ###   ########.fr       */
+/*   Created: 2021/10/07 17:53:10 by bsarai            #+#    #+#             */
+/*   Updated: 2021/10/07 17:53:12 by bsarai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "ft_printf.h"
-
-int	main(int argc, char **argv)
+int	ft_isdigit(int c)
 {
-	check(argc, argv);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
