@@ -14,6 +14,16 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
+void	sb(t_stacks *stacks)
+{
+	t_stack	*tmp;
+
+	tmp = stacks->b;
+	stacks->b = (stacks->b)->next;
+	tmp->next = (stacks->b)->next;
+	(stacks->b)->next = tmp;
+}
+
 void	rra(t_stacks *stacks)
 {
 	t_stack	*tmp;
@@ -42,4 +52,16 @@ void	rrb(t_stacks *stacks)
 	}
 	prev->next = NULL;
 	lstadd_front(&(*stacks).b, tmp);
+}
+
+void	rr(t_stacks *stacks)
+{
+	ra(stacks);
+	rb(stacks);
+}
+
+void	rrr(t_stacks *stacks)
+{
+	rra(stacks);
+	rrb(stacks);
 }
