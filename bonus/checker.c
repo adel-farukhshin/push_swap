@@ -15,5 +15,10 @@
 
 int	main(int argc, char **argv)
 {
+	t_stacks	*stacks;
+
 	check(argc, argv);
+	stacks = stacks_init(argc, argv);
+	stacks_printf(stacks->a, stacks->b);
+	free_stacks(stacks);
 }
