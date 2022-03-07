@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsarai <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 11:00:44 by bsarai            #+#    #+#             */
-/*   Updated: 2022/03/07 11:00:45 by bsarai           ###   ########.fr       */
+/*   Created: 2021/11/18 11:57:01 by bsarai            #+#    #+#             */
+/*   Updated: 2021/11/18 11:57:02 by bsarai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "ft_printf.h"
-#include <unistd.h>
-#include "get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	main(int argc, char **argv)
-{
-	t_stacks	*stacks;
-	char		*str;
+char			*get_next_line(int fd);
+unsigned long	ft_strlen(const char *s);
+char			*ft_strdup(const char *s1);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strjoin(char *s1, char const *s2);
 
-	check(argc, argv);
-	stacks = stacks_init(argc, argv);
-	while ((str = get_next_line(0)))
-	{
-		ft_printf("%s", str);
-	}
-	stacks_printf(stacks->a, stacks->b);
-	free_stacks(stacks);
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 9999
+# endif
+#endif
