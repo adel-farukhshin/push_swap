@@ -22,7 +22,6 @@ void	sa(t_stacks *stacks)
 	stacks->a = (stacks->a)->next;
 	tmp->next = (stacks->a)->next;
 	(stacks->a)->next = tmp;
-	ft_printf("sa\n");
 }
 
 void	pb(t_stacks *stacks)
@@ -34,7 +33,6 @@ void	pb(t_stacks *stacks)
 		tmp = (stacks->a)->next;
 		lstadd_front(&(*stacks).b, stacks->a);
 		stacks->a = tmp;
-		ft_printf("pb\n");
 	}
 }
 
@@ -47,7 +45,6 @@ void	pa(t_stacks *stacks)
 		tmp = (stacks->b)->next;
 		lstadd_front(&(*stacks).a, stacks->b);
 		stacks->b = tmp;
-		ft_printf("pa\n");
 	}
 }
 
@@ -59,7 +56,6 @@ void	ra(t_stacks *stacks)
 	stacks->a = (stacks->a)->next;
 	tmp->next = NULL;
 	lstadd_back(&(*stacks).a, tmp);
-	ft_printf("ra\n");
 }
 
 void	rb(t_stacks *stacks)
@@ -70,5 +66,4 @@ void	rb(t_stacks *stacks)
 	stacks->b = (stacks->b)->next;
 	tmp->next = NULL;
 	lstadd_back(&(*stacks).b, tmp);
-	ft_printf("rb\n");
 }

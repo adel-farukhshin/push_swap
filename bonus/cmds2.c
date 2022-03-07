@@ -27,7 +27,6 @@ void	rra(t_stacks *stacks)
 	}
 	prev->next = NULL;
 	lstadd_front(&(*stacks).a, tmp);
-	ft_printf("rra\n");
 }
 
 void	rrb(t_stacks *stacks)
@@ -43,5 +42,4 @@ void	rrb(t_stacks *stacks)
 	}
 	prev->next = NULL;
 	lstadd_front(&(*stacks).b, tmp);
-	ft_printf("rrb\n");
 }
