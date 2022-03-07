@@ -24,6 +24,10 @@ int	main(int argc, char **argv)
 	check(argc, argv);
 	stacks = stacks_init(argc, argv);
 	parse(stacks);
-	stacks_printf(stacks->a, stacks->b);
+	if (is_final(stacks->a))
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
+	// stacks_printf(stacks->a, stacks->b);
 	free_stacks(stacks);
 }
